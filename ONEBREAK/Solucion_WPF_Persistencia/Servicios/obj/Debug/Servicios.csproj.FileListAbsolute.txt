@@ -43,3 +43,18 @@ C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistenc
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.csproj.CopyComplete
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.dll
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\Servicios.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\Servicios.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\PersistenciaBD.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\PersistenciaBD.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\PersistenciaBD.dll.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Servicios\obj\Debug\Servicios.pdb

@@ -107,3 +107,46 @@ C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistenc
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.csproj.CopyComplete
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.exe
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Views.exe.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Views.exe
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Views.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\ControlzEx.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\EntityFramework.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\MahApps.Metro.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\PersistenciaBD.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Servicios.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\PersistenciaBD.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\PersistenciaBD.dll.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Servicios.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\Servicios.dll.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\ControlzEx.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\EntityFramework.xml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\MahApps.Metro.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\bin\Debug\MahApps.Metro.xml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.csprojAssemblyReference.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\MainWindow.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPFMenu.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_Clientes.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_Contratos.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_ListadoClientes.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_ListadoContratos.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\App.g.cs
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views_MarkupCompile.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views_MarkupCompile.lref
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\App.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\MainWindow.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPFMenu.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_Clientes.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_Contratos.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_ListadoClientes.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\WPF_ListadoContratos.baml
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.g.resources
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.Properties.Resources.resources
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.csproj.GenerateResource.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.csproj.CoreCompileInputs.cache
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.csproj.CopyComplete
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.exe
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Views\obj\Debug\Views.pdb
