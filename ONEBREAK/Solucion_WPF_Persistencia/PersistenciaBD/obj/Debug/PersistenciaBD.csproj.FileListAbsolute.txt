@@ -34,3 +34,15 @@ C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistenc
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CopyComplete
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.dll
 C:\Users\pedre\Desktop\Duoc\Desarrollo Software\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.pdb
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\PersistenciaBD.dll.config
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\PersistenciaBD.dll
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\PersistenciaBD.pdb
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\EntityFramework.dll
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\EntityFramework.xml
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csprojAssemblyReference.cache
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CoreCompileInputs.cache
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CopyComplete
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.dll
+C:\Users\pedre\Source\Repos\Hellraiser4222\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.pdb
