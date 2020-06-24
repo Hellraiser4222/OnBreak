@@ -1,0 +1,77 @@
+﻿<Controls:MetroWindow x:Class="Views.WPFMenu"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Views"
+        mc:Ignorable="d"
+        Title="OnBreak Menu" Height="500" Width="900"
+        Background="FloralWhite"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Grid Margin="0,0,-44,-56">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF1190CB" Offset="1"/>
+                <GradientStop Color="White" Offset="0.274"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="92*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel x:Name="wpMenu" Margin="49,76,86,80" AllowDrop="True" Grid.ColumnSpan="2">
+            <Image Source="Resources/logo_transparent_background.png"  Height="172" Width="293" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.472"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Controls:Tile x:Name="tlAdministradorClientes" Title="Administracion Clientes"
+                           Margin="5,5,5,5"
+                           Background="Aqua"
+                           Height="170"
+                           Width="453" FontSize="14" Foreground="Black" Click="TlAdministradorAutores_Click" >
+                <Image Source="Resources/clientes.png" HorizontalAlignment="Right"  Height="136" Width="129" RenderTransformOrigin="0.5,0.465"/>
+            </Controls:Tile>
+
+            <Controls:Tile x:Name="tlAdministradorContratos" Title="Administracion Contratos"
+                           Margin="5,5,5,5"
+                           Background="Aquamarine"
+                           Height="170"
+                           Width="280" Foreground="Black" Click="TlAdministradorContratos_Click" >
+                <Image Source="Resources/contratos.png"  Height="126" Width="116"/>
+            </Controls:Tile>
+
+            <Controls:Tile x:Name="tlListadoClientes" Title="Listado Clientes"
+                           Margin="5,5,5,5"
+                           Background="Aqua"
+                           Height="170"
+                           Width="232" Foreground="Black" Click="TlListadoClientes_Click">
+                <Image Source="Resources/buscarCLI.png" Height="160" Width="197"/>
+            </Controls:Tile>
+            <Controls:Tile x:Name="tlListadoContratos" Title="Listado Contratos"
+                           Margin="5,5,5,5"
+                           Background="Aquamarine"
+                           Height="170"
+                           Width="217" Foreground="Black" Click="TlListadoContratos_Click" >
+                <Image Source="Resources/pngocean.com.png" Height="140" Width="145"/>
+            </Controls:Tile>
+
+
+        </WrapPanel>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="325"/>
+        <Label x:Name="lblBienvenida" Content="BIENVENIDO A ONBREAK" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" Width="284" Height="47" Foreground="#FF686868" FontSize="24"/>
+        <Image Source="Resources/pngguru.com.png" Grid.Column="1" HorizontalAlignment="Left" Height="66" Margin="286,5,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Raul Ramirez Perez" Grid.Column="1" HorizontalAlignment="Left" Margin="157,23,0,0" VerticalAlignment="Top" Width="109" Foreground="Black"/>
+
+    </Grid>
+
+
+</Controls:MetroWindow>

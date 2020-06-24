@@ -1,0 +1,51 @@
+﻿<Controls:MetroWindow
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Views.WPF_Clientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Views"
+        mc:Ignorable="d"
+        Title="OnBreak Clientes" Height="500" Width="900">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF37ADDF" Offset="1"/>
+                <GradientStop Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image Source="Resources/pngguru.com.png" HorizontalAlignment="Left" Height="66" Margin="817,10,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.507,-0.114"/>
+        <Label Content="Raul Ramirez Perez" HorizontalAlignment="Left" Margin="703,36,0,0" VerticalAlignment="Top" Width="109" Foreground="Black"/>
+        <Image HorizontalAlignment="Left" Source="Resources/logo_transparent_background.png" Height="100" Margin="24,23,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Datos del Cliente" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="280" Height="60" Foreground="Gray" FontSize="36"/>
+        <Label x:Name="lblrut" Content="RUT" HorizontalAlignment="Left" Margin="14,226,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="-2.183,1.648"/>
+        <Label x:Name="lblNombre" Content="Nombre&#xD;&#xA;Completo" HorizontalAlignment="Left" Margin="14,277,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>
+        <Label HorizontalAlignment="Left" Margin="470,310,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblRaSo" Content="Razon&#xD;&#xA;Social" HorizontalAlignment="Left" Margin="14,340,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="1.111,4.425"/>
+        <Label x:Name="lblDireccion" Content="Direccion" HorizontalAlignment="Left" Margin="14,403,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="lblTelefono" Content="Telefono" HorizontalAlignment="Left" Margin="369,226,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.63,6.248"/>
+        <Label x:Name="lblMail" Content="Mail" HorizontalAlignment="Left" Margin="369,277,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label Content="Actividad&#xD;&#xA;Empresa" HorizontalAlignment="Left" Margin="363,316,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label Content="Tipo&#xD;&#xA;Empresa" HorizontalAlignment="Left" Margin="369,379,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <TextBox x:Name="txtrut" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="103,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Background="#FF1190CB" />
+        <TextBox x:Name="txtnombre" MaxLength="50" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="102,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Background="#FF1190CB" BorderBrush="White" />
+        <TextBox x:Name="txtrazon" MaxLength="50" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="103,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Background="#FF1190CB"/>
+        <TextBox x:Name="txtdireccion" MaxLength="30" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="103,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Background="#FF1190CB"/>
+        <TextBox x:Name="txttelefono" MaxLength="15" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="452,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Background="#FF1190CB" BorderBrush="White"/>
+        <TextBox x:Name="txtmail" MaxLength="10" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="452,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Background="#FF1190CB" BorderBrush="White"/>
+        <Label Content="Buscar y Eliminar Por Rut" HorizontalAlignment="Left" Margin="150,17,0,0" VerticalAlignment="Top" Width="297" Foreground="Gray" FontSize="26"/>
+        <TextBox x:Name="txtbuscaRut" MaxLength="10" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Ingrese el Rut" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="150,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Background="#FF1190CB"/>
+        <Button x:Name="btnBuscar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Buscar" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="127" Height="30" Click="BtnBuscar_Click" />
+        <Button x:Name="btnRegistrar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Registrar" HorizontalAlignment="Left" Margin="755,230,0,0" VerticalAlignment="Top" Width="101" Height="44" Click="BtnRegistrar_Click"/>
+        <Button x:Name="btnModificar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Modificar" HorizontalAlignment="Left" Margin="755,298,0,0" VerticalAlignment="Top" Width="101" Height="44" Click="BtnModificar_Click"/>
+        <Button x:Name="btnEliminar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Eliminar" HorizontalAlignment="Left" Margin="320,100,0,0" VerticalAlignment="Top" Width="127" Height="30" Click="BtnEliminar_Click"/>
+        <Label x:Name="lblListado" Content="Mostrar Listado&#xD;&#xA;   de Clientes" HorizontalAlignment="Left" Margin="618,67,0,0" VerticalAlignment="Top" Width="194" Foreground="Gray" FontSize="26"/>
+        <Button x:Name="btnMostarListado"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Mostrar" HorizontalAlignment="Left" Margin="643,151,0,0" VerticalAlignment="Top" Width="135" Height="44" FontSize="20" Click="BtnMostarListado_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="136" Margin="602,67,0,0" VerticalAlignment="Top" Width="215"/>
+        <ComboBox x:Name="cmbActividadEmpresa" Margin="452,325,195,110" Background="#FF1190CB" BorderBrush="White"/>
+        <ComboBox x:Name="cmbTipoEmpresa" Margin="452,379,195,54" Background="#FF1190CB" BorderBrush="White" />
+        <Button x:Name="btnLimpiar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Nuevo" HorizontalAlignment="Left" Margin="755,371,0,0" VerticalAlignment="Top" Width="101" Height="44" Click="BtnLimpiar_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>

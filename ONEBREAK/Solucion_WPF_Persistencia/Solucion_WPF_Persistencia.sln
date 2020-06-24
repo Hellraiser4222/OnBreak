@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistenciaBD", "PersistenciaBD\PersistenciaBD.csproj", "{4E49C36C-553D-4DB3-87A7-DF369EF1B130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{CB186AFD-8056-413A-9090-C1FEAED37E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{25C63852-ABCB-490B-B249-C3FD4CC62A3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E49C36C-553D-4DB3-87A7-DF369EF1B130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E49C36C-553D-4DB3-87A7-DF369EF1B130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E49C36C-553D-4DB3-87A7-DF369EF1B130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E49C36C-553D-4DB3-87A7-DF369EF1B130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB186AFD-8056-413A-9090-C1FEAED37E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB186AFD-8056-413A-9090-C1FEAED37E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB186AFD-8056-413A-9090-C1FEAED37E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB186AFD-8056-413A-9090-C1FEAED37E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C63852-ABCB-490B-B249-C3FD4CC62A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C63852-ABCB-490B-B249-C3FD4CC62A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C63852-ABCB-490B-B249-C3FD4CC62A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C63852-ABCB-490B-B249-C3FD4CC62A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25AD91CA-B757-4B38-8C0D-363E12242243}
+	EndGlobalSection
+EndGlobal
