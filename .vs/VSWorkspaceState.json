@@ -2,7 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\ONEBREAK",
-    "\\ONEBREAK\\Solucion_WPF_Persistencia"
+    "\\ONEBREAK\\Solucion_WPF_Persistencia",
+    "\\ONEBREAK\\Solucion_WPF_Persistencia\\packages",
+    "\\ONEBREAK\\Solucion_WPF_Persistencia\\PersistenciaBD",
+    "\\ONEBREAK\\Solucion_WPF_Persistencia\\Servicios",
+    "\\ONEBREAK\\Solucion_WPF_Persistencia\\Views"
   ],
   "SelectedNode": "\\ONEBREAK\\Solucion_WPF_Persistencia\\Solucion_WPF_Persistencia.sln",
   "PreviewInSolutionExplorer": false

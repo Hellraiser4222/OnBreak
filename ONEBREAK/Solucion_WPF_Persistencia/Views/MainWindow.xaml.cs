@@ -34,8 +34,8 @@ namespace Views
         {
             ValidarIngreso();
         }
-
-        private async void ValidarIngreso()
+        
+        public async void ValidarIngreso()
         {
             if (txtUserName.Text.Equals(username) && psbPass.Password.Equals(password))
             {
