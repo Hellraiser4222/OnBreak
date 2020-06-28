@@ -49,9 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pruebas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WPF_ClientesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,10 +62,6 @@
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{25c63852-abcb-490b-b249-c3fd4cc62a3e}</Project>
       <Name>Servicios</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Views\Views.csproj">
-      <Project>{CB186AFD-8056-413A-9090-C1FEAED37E7C}</Project>
-      <Name>Views</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
