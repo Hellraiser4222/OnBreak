@@ -56,6 +56,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PersistenciaBD\PersistenciaBD.csproj">
+      <Project>{4e49c36c-553d-4db3-87a7-df369ef1b130}</Project>
+      <Name>PersistenciaBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{25c63852-abcb-490b-b249-c3fd4cc62a3e}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Views\Views.csproj">
       <Project>{CB186AFD-8056-413A-9090-C1FEAED37E7C}</Project>
       <Name>Views</Name>
