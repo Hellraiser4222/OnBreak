@@ -39,7 +39,7 @@ namespace Views.Tests
 namespace ProyectoPruebasUnitarias
 {
     [TestClass]
-    public class UnitTest1
+    public class Pruebas
     {
         [TestMethod]
         public void TestMethod1()
