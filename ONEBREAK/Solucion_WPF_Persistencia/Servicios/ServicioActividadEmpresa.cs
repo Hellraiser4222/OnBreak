@@ -12,7 +12,7 @@ namespace Servicios
     {
         public override void AddEntity(ActividadEmpresa entity)
         {
-            // throw new NotImplementedException();
+           
 
             // Crear Actividad.Empresa
             ActividadEmpresa actividad_Empresa = GetEntity(entity.IdActividadEmpresa);
@@ -33,6 +33,12 @@ namespace Servicios
 
         public override List<ActividadEmpresa> GetEntities()
         {
+            return em.ActividadEmpresa.ToList<ActividadEmpresa>();
+        }
+
+        public override List<ActividadEmpresa> GetEntity()
+        {
+            //throw new NotImplementedException();
             return em.ActividadEmpresa.ToList<ActividadEmpresa>();
         }
 
@@ -58,11 +64,7 @@ namespace Servicios
             return em.ActividadEmpresa.Where(a => a.IdActividadEmpresa == (int)key).FirstOrDefault<ActividadEmpresa>();
         }
 
-        public override List<ActividadEmpresa> GetEntity()
-        {
-            //throw new NotImplementedException();
-            return em.ActividadEmpresa.ToList<ActividadEmpresa>();
-        }
+     
 
         public override void UpdateEntity(ActividadEmpresa entity)
         {
