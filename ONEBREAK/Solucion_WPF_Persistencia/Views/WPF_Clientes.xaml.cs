@@ -65,7 +65,7 @@ namespace Views
 
         }
 
-        public async void RegistrarCliente()
+        private async void RegistrarCliente()
         {
             try
             {
@@ -174,7 +174,7 @@ namespace Views
         }
 
 
-        public async void ModificarCliente()
+        private async void ModificarCliente()
         {
             try
             {
@@ -213,7 +213,7 @@ namespace Views
             }
         }
 
-        public async void EliminarCliente()
+        private async void EliminarCliente()
         {
             try
             {
@@ -240,7 +240,7 @@ namespace Views
             }
         }
 
-        public async void BuscarDatosCliente()
+        private async void BuscarDatosCliente()
         {
             try
             {
@@ -271,7 +271,7 @@ namespace Views
 
         }
 
-        public async void CargarDatosClienteExterno(Cliente cliente)
+        private async void CargarDatosClienteExterno(Cliente cliente)
         {
             try
             {
