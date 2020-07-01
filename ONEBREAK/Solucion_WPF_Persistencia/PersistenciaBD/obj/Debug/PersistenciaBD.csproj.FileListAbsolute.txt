@@ -45,3 +45,4 @@ C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\Persisten
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CopyComplete
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.dll
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\obj\Debug\PersistenciaBD.csprojAssemblyReference.cache

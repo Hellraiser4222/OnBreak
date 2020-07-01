@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PersistenciaBD;
+using Servicios;
 
 namespace Servicios
 {
     public class ServicioTipoEvento : AbstractService<TipoEvento>
     {
-        public override void AddEntity(TipoEvento entity)
+        public override int AddEntity(TipoEvento entity)
         {
 
-
+            int res = 1;
             // Crear TipoEvento
             TipoEvento Tipo_Evento = GetEntity(entity.IdTipoEvento);
             if (Tipo_Evento == null)
@@ -20,13 +21,15 @@ namespace Servicios
 
                 em.TipoEvento.Add(entity);
                 //Guardar Cambios
-                em.SaveChanges();
+                res=em.SaveChanges();
 
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se logro Registrar el Tipo de Evento");
             }
+            return res;
 
 
 
@@ -39,47 +42,52 @@ namespace Servicios
             return em.TipoEvento.ToList<TipoEvento>();
         }
 
-        public override void DeleteEntity(object key)
+        public override int DeleteEntity(object key)
         {
-
+            int res = 1;
             TipoEvento Tipo_Evento = GetEntity(key);
             if (Tipo_Evento != null)
             {
                 em.TipoEvento.Remove(Tipo_Evento);
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede Eliminar Tipo Evento , debido a que existe o esta relacionado  ");
 
             }
+            return res;
         }
 
         public override TipoEvento GetEntity(object key)
         {
-            //throw new NotImplementedException();
+            
             return em.TipoEvento.Where(a => a.IdTipoEvento == (int)key).FirstOrDefault<TipoEvento>();
         }
 
         public override List<TipoEvento> GetEntity()
         {
-            //throw new NotImplementedException();
+            
             return em.TipoEvento.ToList<TipoEvento>();
         }
 
-        public override void UpdateEntity(TipoEvento entity)
+        public override int UpdateEntity(TipoEvento entity)
         {
+            int res = 1;
             TipoEvento Tipo_Evento = GetEntity(entity.IdTipoEvento);
             if (Tipo_Evento != null)
             {
 
                 Tipo_Evento.Descripcion = entity.Descripcion;
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede actualizar los Datos De Tipo de Evento");
             }
+            return res;
 
 
 

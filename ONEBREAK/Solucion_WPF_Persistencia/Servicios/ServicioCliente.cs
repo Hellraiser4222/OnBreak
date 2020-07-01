@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,27 +11,39 @@ namespace Servicios
     public class ServicioCliente : AbstractService<Cliente>
     {
 
-        public override void AddEntity(Cliente entity)
+        public override int AddEntity(Cliente entity)
         {
-         
 
+            int res = 0;
             // Crear Cliente
             Cliente cliente = GetEntity(entity.RutCliente);
             if (cliente == null)
             {
-                // Insertar una actividad empresa
-                em.Cliente.Add(entity);
-                //Guardar Cambios
-                em.SaveChanges();
-
+                try
+                {
+                    // Insertar una actividad empresa
+                    em.Cliente.Add(entity);
+                    //Guardar Cambios
+                    res = em.SaveChanges();
+                }
+                catch(SqlException ex)
+                {
+                    String msg = "";
+                    if (ex.Number == 1405)
+                        msg = "Valor de clave primaria Repetido";
+                    if (ex.Number == 23401)
+                        msg = "Falta definir el valor de la Propiedad";
+                    throw new Exception(msg);
+                }
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se logro Registrar el Cliente");
             }
 
 
-
+            return res;
 
 
         }
@@ -40,26 +53,24 @@ namespace Servicios
             return em.Cliente.ToList<Cliente>();
         }
 
-        public override void DeleteEntity(object key)
+        public override int DeleteEntity(object key)
         {
-           
+            int res = 0;
             Cliente cliente = GetEntity(key);
             if (cliente != null)
             {
                 em.Cliente.Remove(cliente);
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede Eliminar Cliente , debido a que existe o esta relacionado  ");
 
             }
+            return res;
         }
-        /// <summary>
-        /// //////////////////////////////
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
+  
         public override Cliente GetEntity(object key)
         {
             //throw new NotImplementedException();
@@ -72,9 +83,9 @@ namespace Servicios
             return em.Cliente.ToList<Cliente>();
         }
 
-        public override void UpdateEntity(Cliente entity)
+        public override int UpdateEntity(Cliente entity)
         {
-            //throw new NotImplementedException();
+            int res = 0;
             Cliente cliente = GetEntity(entity.RutCliente);
             if (cliente != null)
             {
@@ -83,12 +94,14 @@ namespace Servicios
                 cliente.IdTipoEmpresa = entity.IdTipoEmpresa;
                 cliente.MailContacto = entity.MailContacto;
                 cliente.Telefono = entity.Telefono;
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede actualizar los Datos de Cliente");
             }
+            return res;
         }
 
     }

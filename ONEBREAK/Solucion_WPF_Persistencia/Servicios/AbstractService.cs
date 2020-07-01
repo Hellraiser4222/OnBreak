@@ -17,11 +17,11 @@ namespace Servicios
         protected OnBreakEntities em = new OnBreakEntities();
 
 
-        public abstract void AddEntity(T entity);
+        public abstract int AddEntity(T entity);
 
-        public abstract void UpdateEntity(T entity);
+        public abstract int UpdateEntity(T entity);
     
-        public abstract void DeleteEntity( object key);
+        public abstract int DeleteEntity( object key);
 
         public abstract T GetEntity(object key);
 

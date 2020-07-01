@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PersistenciaBD;
+using Servicios;
 
 namespace Servicios
 {
     public class ServicioContrato : AbstractService<Contrato>
     {
 
-        public override void AddEntity(Contrato entity)
+        public override int AddEntity(Contrato entity)
         {
-
+            int res = 1;
 
             // Crear Contrato
             Contrato contrato = GetEntity(entity.Numero);
@@ -21,14 +22,15 @@ namespace Servicios
               
                 em.Contrato.Add(entity);
                 //Guardar Cambios
-                em.SaveChanges();
+                res=em.SaveChanges();
 
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se logro Registrar el Contrato");
             }
-
+            return res;
 
 
 
@@ -40,41 +42,40 @@ namespace Servicios
             return em.Contrato.ToList<Contrato>();
         }
 
-        public override void DeleteEntity(object key)
+        public override int DeleteEntity(object key)
         {
-
+            int res = 1;
             Contrato contrato = GetEntity(key);
             if (contrato != null)
             {
                 em.Contrato.Remove(contrato);
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede Eliminar Contrato , debido a que existe o esta relacionado  ");
 
             }
+            return res;
         }
-        /// <summary>
-        /// //////////////////////////////
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
+       
+
         public override Contrato GetEntity(object key)
         {
-            //throw new NotImplementedException();
+          
             return em.Contrato.Where(a => a.Numero == (String)key).FirstOrDefault<Contrato>();
         }
 
         public override List<Contrato> GetEntity()
         {
-            //throw new NotImplementedException();
+          
             return em.Contrato.ToList<Contrato>();
         }
 
-        public override void UpdateEntity(Contrato entity)
+        public override int UpdateEntity(Contrato entity)
         {
-            //throw new NotImplementedException();
+            int res = 1;
             Contrato contrato = GetEntity(entity.Numero);
             if (contrato != null)
             {
@@ -92,12 +93,14 @@ namespace Servicios
                 contrato.Observaciones = entity.Observaciones;
 
 
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede actualizar los Datos de Contrato");
             }
+            return res;
         }
 
     }

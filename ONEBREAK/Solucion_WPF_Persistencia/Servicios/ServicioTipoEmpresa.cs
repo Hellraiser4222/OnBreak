@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PersistenciaBD;
+using Servicios;
 
 namespace Servicios
 {
     public class ServicioTipoEmpresa : AbstractService<TipoEmpresa>
     {
-        public override void AddEntity(TipoEmpresa entity)
+        public override int AddEntity(TipoEmpresa entity)
         {
 
-
+            int res = 1;
             // Crear TipoEmpresa
             TipoEmpresa Tipo_Empresa = GetEntity(entity.IdTipoEmpresa);
             if (Tipo_Empresa == null)
@@ -20,13 +21,15 @@ namespace Servicios
 
                 em.TipoEmpresa.Add(entity);
                 //Guardar Cambios
-                em.SaveChanges();
+                res=em.SaveChanges();
 
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se logro Registrar el Tipo Empresa");
             }
+            return res;
 
 
 
@@ -38,49 +41,55 @@ namespace Servicios
             return em.TipoEmpresa.ToList<TipoEmpresa>();
         }
 
-        public override void DeleteEntity(object key)
+        public override int  DeleteEntity(object key)
         {
+            int res = 1;
 
             TipoEmpresa TipoEmpresa = GetEntity(key);
             if (TipoEmpresa != null)
             {
                 em.TipoEmpresa.Remove(TipoEmpresa);
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede Eliminar TipoEmpresa , debido a que existe o esta relacionado  ");
 
             }
+            return res;
         }
         
         public override TipoEmpresa GetEntity(object key)
         {
-            //throw new NotImplementedException();
+            
             return em.TipoEmpresa.Where(a => a.IdTipoEmpresa == (int)key).FirstOrDefault<TipoEmpresa>();
         }
 
         public override List<TipoEmpresa> GetEntity()
         {
-            //throw new NotImplementedException();
+           
             return em.TipoEmpresa.ToList<TipoEmpresa>();
         }
 
-        public override void UpdateEntity(TipoEmpresa entity)
+        public override int UpdateEntity(TipoEmpresa entity)
         {
+            int res = 1;
             TipoEmpresa Tipo_Empresa = GetEntity(entity.IdTipoEmpresa);
             if (Tipo_Empresa != null)
             {
 
                 Tipo_Empresa.Descripcion = entity.Descripcion;
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede actualizar los Datos De Tipo de Empresa");
             }
-           
-                
+            return res;
+
+
 
 
         }

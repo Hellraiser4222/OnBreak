@@ -4,27 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PersistenciaBD;
+using Servicios;
 
 namespace Servicios
 {
     public class ServicioModalidadServicio : AbstractService<ModalidadServicio>
     {
-        public override void AddEntity(ModalidadServicio entity)
+        public override int  AddEntity(ModalidadServicio entity)
         {
-           
+            int res = 1;
+
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio == null)
             {
                 // Insertar una actividad empresa
                 em.ModalidadServicio.Add(entity);
                 //Guardar Cambios
-                em.SaveChanges();
+                res=em.SaveChanges();
 
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se logro Registrar La Modalidad de Servicio");
             }
+            return res;
 
 
 
@@ -36,25 +40,28 @@ namespace Servicios
             return em.ModalidadServicio.ToList<ModalidadServicio>();
         }
 
-        public override void DeleteEntity(object key)
+        public override int  DeleteEntity(object key)
         {
+            int res = 1;
            
             ModalidadServicio Modalidad_Servicio = GetEntity(key);
             if (Modalidad_Servicio != null)
             {
                 em.ModalidadServicio.Remove(Modalidad_Servicio);
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede Eliminar la Modalidad de servicio, debido a que existe o esta relacionado con un Cliente ");
 
             }
+            return res;
         }
 
         public override ModalidadServicio GetEntity(object key)
         {
-            //verrrrrrrrrrrrrrrr
+            
             return em.ModalidadServicio.Where(a => a.IdModalidad == (String)key).FirstOrDefault<ModalidadServicio>();
         }
 
@@ -64,9 +71,11 @@ namespace Servicios
             return em.ModalidadServicio.ToList<ModalidadServicio>();
         }
 
-        public override void UpdateEntity(ModalidadServicio entity)
+        public override int UpdateEntity(ModalidadServicio entity)
         {
-            
+
+            int res = 1;
+
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio != null)
             {
@@ -74,12 +83,14 @@ namespace Servicios
                 Modalidad_Servicio.Nombre = entity.Nombre;
                 Modalidad_Servicio.ValorBase = entity.ValorBase;
                 Modalidad_Servicio.PersonalBase = entity.PersonalBase;
-                em.SaveChanges();
+                res=em.SaveChanges();
             }
             else
             {
+                res = -1;
                 throw new ArgumentException("No se puede actualizar los Datos de la Modalidad de Servicio");
             }
+            return res;
         }
     }
 }
