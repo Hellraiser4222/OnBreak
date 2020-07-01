@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PersistenciaBD;
+
 
 namespace Servicios.Tests
 {
@@ -27,7 +27,7 @@ namespace Servicios.Tests
             clientetest.Telefono = "23243254";
             clientetest.Direccion = "calle mermelada 123";
 
-            Exception ex;
+           // Exception ex;
             ServicioCliente sc = new ServicioCliente();
             int res = sc.AddEntity(clientetest);
 
