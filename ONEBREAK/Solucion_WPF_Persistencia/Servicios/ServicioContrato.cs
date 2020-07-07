@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,20 +16,32 @@ namespace Servicios
         {
             int res = 1;
 
+           
             // Crear Contrato
             Contrato contrato = GetEntity(entity.Numero);
             if (contrato == null)
             {
-              
+                try { 
                 em.Contrato.Add(entity);
                 //Guardar Cambios
                 res=em.SaveChanges();
+                }
+                catch(SqlException ex)
+                {
+                    String msg = "";
+                    if (ex.Number == 1405)
+                        msg = "Valor de clave primaria Repetido";
+                    if (ex.Number == 23401)
+                        msg = "Falta definir el valor de la Propiedad";
+                    throw new Exception(msg);
 
+
+                }
             }
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar el Contrato");
+                throw new ArgumentException("No se logro Registrar el Contrato,contrato ya existente");
             }
             return res;
 
@@ -54,7 +67,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar Contrato , debido a que existe o esta relacionado  ");
+                throw new ArgumentException("No se puede Eliminar Contrato , debido a que no  existe o hay un campo vacio  ");
 
             }
             return res;
@@ -98,7 +111,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de Contrato");
+                throw new ArgumentException("No se puede actualizar los Datos de Contrato,debido a que no existe o datos vacios");
             }
             return res;
         }
