@@ -88,7 +88,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de la Modalidad de Servicio");
+                throw new ArgumentException("No se puede actualizar los Datos de la Modalidad de Servicio, debido a que no existe o se encuentra un campo vacio");
             }
             return res;
         }

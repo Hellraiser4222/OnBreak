@@ -36,5 +36,30 @@ namespace Servicios.Tests
             }
 
         }
+
+        [TestMethod()]
+        public void AgregarTipoEmpresasinExito()
+        {
+            try
+            {
+                //PRUEBA sin exito - ya se encuentra registrada
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+
+                tipoEmpresatest.IdTipoEmpresa = 50;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+
+
+
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                int res = ste.AddEntity(tipoEmpresatest);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
+
+        }
     }
 }

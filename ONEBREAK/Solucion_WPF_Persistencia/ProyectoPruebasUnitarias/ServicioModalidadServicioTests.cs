@@ -38,73 +38,176 @@ namespace Servicios.Tests
             }
 
         }
-   
 
-    [TestMethod()]
-    public void AgregarModalidadsinExitoFaltaDatos()
-    {
-        try
+
+        [TestMethod()]
+        public void AgregarModalidadsinExitoFaltaDatos()
         {
-            //PRUEBA sin exito Por falta de datos
-            ModalidadServicio Modalidadtest = new ModalidadServicio();
-
-            Modalidadtest.IdModalidad = "";
-            Modalidadtest.Nombre = "Matrimonio";
-            Modalidadtest.IdTipoEvento = 20;
-            Modalidadtest.ValorBase = 2000000;
-            Modalidadtest.PersonalBase = 35;
-
-
-
-
-
-            if (string.IsNullOrEmpty(Modalidadtest.IdModalidad))
+            try
             {
-                throw new Exception("Valor del modalidad no puede ser vacio");
+                //PRUEBA sin exito Por falta de datos
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "";
+                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+
+
+
+
+                if (string.IsNullOrEmpty(Modalidadtest.IdModalidad))
+                {
+                    throw new Exception("Valor del modalidad no puede ser vacio");
+                }
+
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.AddEntity(Modalidadtest);
+
             }
+            catch (Exception ex)
+            {
+                throw (ex);
 
-
-            ServicioModalidadServicio sm = new ServicioModalidadServicio();
-            int res = sm.AddEntity(Modalidadtest);
-
+            }
         }
-        catch (Exception ex)
-        {
-            throw (ex);
 
+
+        [TestMethod()]
+        public void AgregarModalidadiSinExitoYaExiste()
+        {
+            try
+            {
+                //PRUEBA sin exito por que ya existe 
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.AddEntity(Modalidadtest);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
         }
-    } 
-    
-
-    [TestMethod()]
-    public void AgregarModalidadiSinExitoYaExiste()
-    {
-        try
+        /// <summary>
+        /// Creacion de pruebas unitarias en Actualizar
+        /// </summary>
+        [TestMethod()]
+        public void PruebaModalidadActualizarConExito()
         {
-            //PRUEBA sin exito por que ya existe 
-            ModalidadServicio Modalidadtest = new ModalidadServicio();
+            try
+            {
+                //PRUEBA EXITOSA- Actualizar una Modalidad
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
 
-            Modalidadtest.IdModalidad = "CA001";
-            Modalidadtest.Nombre = "Matrimonio";
-            Modalidadtest.IdTipoEvento = 20;
-            Modalidadtest.ValorBase = 2000000;
-            Modalidadtest.PersonalBase = 35;
+                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.Nombre = "Matrimonio Civil";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
 
 
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.UpdateEntity(Modalidadtest);
 
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
 
-
-    
-
-            ServicioModalidadServicio sm = new ServicioModalidadServicio();
-            int res = sm.AddEntity(Modalidadtest);
-
+            }
         }
-        catch (Exception ex)
+
+        [TestMethod()]
+        public void PruebaModalidadActualizarsinExito()
         {
-            throw (ex);
+            try
+            {
+                //PRUEBA si exito , no existe
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "C001";
+                Modalidadtest.Nombre = "Matrimonio Civil";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.UpdateEntity(Modalidadtest);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
+        }
+
+        [TestMethod()]
+        public void PruebaModalidadActualizarsinExitoFaltaCodigo()
+        {
+            try
+            {
+                //PRUEBA si exito , debido a que falta codigo 
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "";
+                Modalidadtest.Nombre = "Matrimonio Civil";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.UpdateEntity(Modalidadtest);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
+        }
+        /// <summary>
+        /// Creacion de pruebas en metodo Eliminar Modalidad
+        /// </summary>
+        //[TestMethod()]
+        //public void EliminarModalidadConExito()
+        //{
+        //    try
+        //    {
+        //        PRUEBA EXITOSA-Se elimina Modalidad
+        //        ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+        //        Modalidadtest.IdModalidad = "CA001";
+        //        Modalidadtest.Nombre = "Matrimonio";
+        //        Modalidadtest.IdTipoEvento = 20;
+        //        Modalidadtest.ValorBase = 2000000;
+        //        Modalidadtest.PersonalBase = 35;
+
+
+        //        ServicioModalidadServicio sm = new ServicioModalidadServicio();
+        //        int res = sm.DeleteEntity(Modalidadtest);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw (ex);
+
+        //    }
 
         }
     }
-}
-   }

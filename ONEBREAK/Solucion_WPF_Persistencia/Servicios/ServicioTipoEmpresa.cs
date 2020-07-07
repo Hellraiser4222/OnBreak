@@ -27,7 +27,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar el Tipo Empresa");
+                throw new ArgumentException("No se logro Registrar el Tipo Empresa,debido a que ya esiste o hay un campo vacio");
             }
             return res;
 

@@ -65,7 +65,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar Cliente , debido a que existe o esta relacionado  ");
+                throw new ArgumentException("No se puede Eliminar Cliente , debido a que no existe o esta relacionado  ");
 
             }
             return res;
@@ -73,13 +73,17 @@ namespace Servicios
   
         public override Cliente GetEntity(object key)
         {
-            //throw new NotImplementedException();
+           
+            //Cliente cliente = (Cliente)key;
+            //String rutCliente = cliente.RutCliente;
+
             return em.Cliente.Where(a => a.RutCliente == (string)key).FirstOrDefault<Cliente>();
+            //return em.Cliente.Where(a => a.RutCliente == rutCliente).FirstOrDefault<Cliente>();
         }
 
         public override List<Cliente> GetEntity()
         {
-            //throw new NotImplementedException();
+          
             return em.Cliente.ToList<Cliente>();
         }
 

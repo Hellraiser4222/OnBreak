@@ -12,26 +12,32 @@ namespace Servicios.Tests
     [TestClass()]
     public class ServicioContratoTests
     {
-        /// <summary>
-        /// Pruebas ADD Entity Contrato
-        /// </summary>
+        // <summary>
+        // Pruebas ADD Entity Contrato
+        // </summary>
         [TestMethod()]
         public void AgregarContratoConExito()
         {
+
+            DateTime fecha = new DateTime(2020, 11, 12);
+            DateTime fecha1 = new DateTime(2020, 12, 12);
+            DateTime time = new DateTime(2020, 11, 16, 12, 30, 3);
+            DateTime time1 = new DateTime(2020, 11, 16, 22, 30, 3);
             try
             {
                 //PRUEBA EXITOSA- registar un nuevo contrato en la bd.
-               Contrato Contratotest = new Contrato();
-                //Falta Ver EL tema de fechas
-               // Contratotest.Creacion = ;
-               // Contratotest.Termino = ;
-                Contratotest.RutCliente = "2011133342";
+                Contrato Contratotest = new Contrato();
+
+                Contratotest.Numero = "1";
+                Contratotest.Creacion = fecha;
+                Contratotest.Termino = fecha1;
+                Contratotest.RutCliente = "201113334";
                 Contratotest.IdModalidad = "CB001";
                 Contratotest.IdTipoEvento = 10;
-              //  Contratotest.FechaHoraInicio = ;
-              //  Contratotest.FechaHoraTermino = ;
+                Contratotest.FechaHoraInicio = time;
+                Contratotest.FechaHoraTermino = time1;
                 Contratotest.Asistentes = 10;
-                Contratotest.PersonalAdicional = 2;
+                Contratotest.PersonalAdicional = 3;
                 Contratotest.Realizado = true;
                 Contratotest.ValorTotalContrato = 1222222;
                 Contratotest.Observaciones = "Evento Ejecutivos";
