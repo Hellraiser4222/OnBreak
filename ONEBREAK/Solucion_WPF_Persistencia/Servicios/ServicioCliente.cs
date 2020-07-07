@@ -103,7 +103,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de Cliente");
+                throw new ArgumentException("No se puede actualizar los Datos de Cliente,debido a que no existe ");
             }
             return res;
         }

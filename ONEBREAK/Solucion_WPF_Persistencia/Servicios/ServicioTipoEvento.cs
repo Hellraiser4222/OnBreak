@@ -27,7 +27,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar el Tipo de Evento");
+                throw new ArgumentException("No se logro Registrar el Tipo de Evento, debido a que ya existe");
             }
             return res;
 
@@ -54,7 +54,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar Tipo Evento , debido a que existe o esta relacionado  ");
+                throw new ArgumentException("No se puede Eliminar Tipo Evento , debido a que no existe ");
 
             }
             return res;
@@ -85,7 +85,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos De Tipo de Evento");
+                throw new ArgumentException("No se puede actualizar los Datos De Tipo de Evento, debido a que no existe");
             }
             return res;
 

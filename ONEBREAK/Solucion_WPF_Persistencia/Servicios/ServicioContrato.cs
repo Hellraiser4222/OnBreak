@@ -111,7 +111,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de Contrato,debido a que no existe o datos vacios");
+                throw new ArgumentException("No se puede actualizar los Datos de Contrato,debido a que no existe ");
             }
             return res;
         }
