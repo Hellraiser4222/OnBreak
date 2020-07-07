@@ -23,3 +23,6 @@ C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoP
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\obj\Debug\ProyectoPruebasUnitarias.csproj.CopyComplete
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\obj\Debug\ProyectoPruebasUnitarias.dll
 C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\obj\Debug\ProyectoPruebasUnitarias.pdb
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\bin\Debug\ProyectoPruebasUnitarias.dll.config
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\ProyectoPruebasUnitarias\bin\Debug\EntityFramework.SqlServer.xml

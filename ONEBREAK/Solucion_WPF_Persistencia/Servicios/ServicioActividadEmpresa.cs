@@ -76,7 +76,6 @@ namespace Servicios
 
         public override ActividadEmpresa GetEntity(object key)
         {
-            //throw new NotImplementedException();
             return em.ActividadEmpresa.Where(a => a.IdActividadEmpresa == (int)key).FirstOrDefault<ActividadEmpresa>();
         }
 

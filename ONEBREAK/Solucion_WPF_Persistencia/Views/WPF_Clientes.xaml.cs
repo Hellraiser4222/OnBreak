@@ -271,7 +271,7 @@ namespace Views
 
         }
 
-        private async void CargarDatosClienteExterno(Cliente cliente)
+        public async void CargarDatosClienteExterno(Cliente cliente)
         {
             try
             {

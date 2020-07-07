@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\chiay\Desktop\PROGRAMACIÓN\Pruebas y trabajos\EVALUACION 2\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\Model_Libreria.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\chiay\Source\Repos\OnBreak\ONEBREAK\Solucion_WPF_Persistencia\PersistenciaBD\Model_Libreria.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

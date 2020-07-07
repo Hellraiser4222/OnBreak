@@ -39,7 +39,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar el Cliente");
+                throw new ArgumentException("Cliente ya existe, no es posible registrar.") ;
             }
 
 

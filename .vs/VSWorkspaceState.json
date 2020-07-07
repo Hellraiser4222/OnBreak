@@ -6,8 +6,9 @@
     "\\ONEBREAK\\Solucion_WPF_Persistencia\\packages",
     "\\ONEBREAK\\Solucion_WPF_Persistencia\\PersistenciaBD",
     "\\ONEBREAK\\Solucion_WPF_Persistencia\\Servicios",
+    "\\ONEBREAK\\Solucion_WPF_Persistencia\\TestResults",
     "\\ONEBREAK\\Solucion_WPF_Persistencia\\Views"
   ],
-  "SelectedNode": "\\ONEBREAK\\Solucion_WPF_Persistencia\\Views\\WPF_ListadoClientes.xaml",
+  "SelectedNode": "\\ONEBREAK\\Solucion_WPF_Persistencia\\PersistenciaBD\\Cliente.cs",
   "PreviewInSolutionExplorer": false
 }
