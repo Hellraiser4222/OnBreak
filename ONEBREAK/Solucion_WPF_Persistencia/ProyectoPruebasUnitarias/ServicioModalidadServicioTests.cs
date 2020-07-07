@@ -135,7 +135,7 @@ namespace Servicios.Tests
         {
             try
             {
-                //PRUEBA si exito , no existe
+                //PRUEBA sin exito , no existe modalidad
                 ModalidadServicio Modalidadtest = new ModalidadServicio();
 
                 Modalidadtest.IdModalidad = "C001";
@@ -184,30 +184,90 @@ namespace Servicios.Tests
         /// <summary>
         /// Creacion de pruebas en metodo Eliminar Modalidad
         /// </summary>
-        //[TestMethod()]
-        //public void EliminarModalidadConExito()
-        //{
-        //    try
-        //    {
-        //        PRUEBA EXITOSA-Se elimina Modalidad
-        //        ModalidadServicio Modalidadtest = new ModalidadServicio();
+        [TestMethod()]
+        public void EliminarModalidadConExito()
+        {
+            try
+            {
+                //PRUEBA EXITOSA-Se elimina Modalidad
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
 
-        //        Modalidadtest.IdModalidad = "CA001";
-        //        Modalidadtest.Nombre = "Matrimonio";
-        //        Modalidadtest.IdTipoEvento = 20;
-        //        Modalidadtest.ValorBase = 2000000;
-        //        Modalidadtest.PersonalBase = 35;
+                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
 
 
-        //        ServicioModalidadServicio sm = new ServicioModalidadServicio();
-        //        int res = sm.DeleteEntity(Modalidadtest);
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.DeleteEntity(Modalidadtest.IdModalidad);
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
 
-        //    }
+            }
+
+        }
+
+        [TestMethod()]
+        public void EliminarModalidadSinExitonoExiste()
+        {
+            try
+            {
+                //PRUEBA sin exito -Se elimina Modalidad que no existe
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.DeleteEntity(Modalidadtest.IdModalidad);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
+
+        }
+
+
+        [TestMethod()]
+        public void EliminarModalidadSinExitovacio()
+        {
+            try
+            {
+                //PRUEBA sin exito -Se elimina Modalidad con campo vacio
+                ModalidadServicio Modalidadtest = new ModalidadServicio();
+
+                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdTipoEvento = 20;
+                Modalidadtest.ValorBase = 2000000;
+                Modalidadtest.PersonalBase = 35;
+
+                if (string.IsNullOrEmpty(Modalidadtest.IdModalidad))
+                {
+                    throw new Exception("Valor del modalidad no puede ser vacio");
+                }
+
+                ServicioModalidadServicio sm = new ServicioModalidadServicio();
+                int res = sm.DeleteEntity(Modalidadtest.IdModalidad);
+
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+
+            }
 
         }
     }
+}

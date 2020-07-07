@@ -53,7 +53,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar la Modalidad de servicio, debido a que existe o esta relacionado con un Cliente ");
+                throw new ArgumentException("No se puede Eliminar la Modalidad de servicio, debido a que no existe o hay un campo vacio ");
 
             }
             return res;
