@@ -39,7 +39,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar La activividad de la Empresa");
+                throw new ArgumentException("No se logro Registrar La activividad de la Empresa, debido a que no existe ");
             }
             return res;
 
@@ -68,7 +68,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar La Actividad de la empresa, debido a que existe o esta relacionado con un Cliente ");
+                throw new ArgumentException("No se puede Eliminar La Actividad de la empresa, debido a que no existe  ");
 
             }
             return res;
@@ -93,7 +93,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de la Actividad de la Empresa");
+                throw new ArgumentException("No se puede actualizar los Datos de la Actividad de la Empresa, debido a que no existe ");
             }
             return res;
         }
