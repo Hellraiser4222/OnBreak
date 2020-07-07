@@ -61,6 +61,7 @@
     <Compile Include="ServicioActividadEmpresaTests.cs" />
     <Compile Include="ServicioClienteTests.cs" />
     <Compile Include="ServicioContratoTests.cs" />
+    <Compile Include="ServicioModalidadServicioTests.cs" />
     <Compile Include="ServicioTipoEmpresaTests.cs" />
     <Compile Include="ServicioTipoEventoTests.cs" />
   </ItemGroup>

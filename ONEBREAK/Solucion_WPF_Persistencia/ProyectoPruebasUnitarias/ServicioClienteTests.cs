@@ -84,7 +84,7 @@ namespace Servicios.Tests
         {
             try
             {
-                //PRUEBA CON ERROR- NO SE GRABA PORQUE FALTA CAMPO OBLIGATORIO
+                //PRUEBA CON ERROR- NO SE GRABA PORQUE porque ya existe
                 Cliente clientetest = new Cliente();
                 clientetest.RutCliente = "201113334";
                 clientetest.RazonSocial = "Servicio";
@@ -103,9 +103,12 @@ namespace Servicios.Tests
             {
                 throw (ex);
 
-                //        }
+              
 
             }
+
+
+
             /// <summary>
             /// //Pruebas Unitarias a Metodo DeleteEntity
             /// 

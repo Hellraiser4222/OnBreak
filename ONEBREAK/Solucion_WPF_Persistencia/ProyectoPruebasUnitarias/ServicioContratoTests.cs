@@ -23,13 +23,13 @@ namespace Servicios.Tests
                 //PRUEBA EXITOSA- registar un nuevo contrato en la bd.
                Contrato Contratotest = new Contrato();
                 //Falta Ver EL tema de fechas
-                Contratotest.Creacion = ;
-                Contratotest.Termino = ;
+               // Contratotest.Creacion = ;
+               // Contratotest.Termino = ;
                 Contratotest.RutCliente = "2011133342";
                 Contratotest.IdModalidad = "CB001";
                 Contratotest.IdTipoEvento = 10;
-                Contratotest.FechaHoraInicio = ;
-                Contratotest.FechaHoraTermino = ;
+              //  Contratotest.FechaHoraInicio = ;
+              //  Contratotest.FechaHoraTermino = ;
                 Contratotest.Asistentes = 10;
                 Contratotest.PersonalAdicional = 2;
                 Contratotest.Realizado = true;
