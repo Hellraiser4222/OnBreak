@@ -27,7 +27,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se logro Registrar el Tipo Empresa,debido a que ya esiste o hay un campo vacio");
+                throw new ArgumentException("No se logro Registrar el Tipo Empresa,debido a que ya existe");
             }
             return res;
 
@@ -54,7 +54,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede Eliminar TipoEmpresa , debido a que existe o esta relacionado  ");
+                throw new ArgumentException("No se puede Eliminar Tipo Empresa , debido a que no  existe o hay un campo vacio ");
 
             }
             return res;
@@ -85,7 +85,7 @@ namespace Servicios
             else
             {
                 res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos De Tipo de Empresa");
+                throw new ArgumentException("No se puede actualizar los Datos De Tipo de Empresa, Ya que no existe ");
             }
             return res;
 
