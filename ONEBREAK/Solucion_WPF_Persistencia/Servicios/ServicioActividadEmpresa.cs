@@ -19,26 +19,17 @@ namespace Servicios
             ActividadEmpresa actividad_Empresa = GetEntity(entity.IdActividadEmpresa);
             if (actividad_Empresa == null)
             {
-                try 
-                {
                     // Insertar una actividad empresa
                     em.ActividadEmpresa.Add(entity);
                     //Guardar Cambios
                     res=em.SaveChanges();
-                }
-                catch (SqlException ex)
-                {
-                    String msg = "";
-                    if (ex.Number == 1405)
-                        msg = "Valor de clave primaria Repetido";
-                    if (ex.Number == 23401)
-                        msg = "Falta definir el valor de la Propiedad";
-                    throw new Exception(msg);
-                }
+                
+             
+               
             }
             else
             {
-                res = -1;
+               
                 throw new ArgumentException("No se logro Registrar La activividad de la Empresa, debido a que no existe ");
             }
             return res;
@@ -67,7 +58,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+               
                 throw new ArgumentException("No se puede Eliminar La Actividad de la empresa, debido a que no existe  ");
 
             }
@@ -83,7 +74,7 @@ namespace Servicios
 
         public override int UpdateEntity(ActividadEmpresa entity)
         {
-           int res = 1;
+           int res = 0;
             ActividadEmpresa actividad_Empresa = GetEntity(entity.IdActividadEmpresa);
             if(actividad_Empresa != null)
             {
@@ -92,7 +83,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+               
                 throw new ArgumentException("No se puede actualizar los Datos de la Actividad de la Empresa, debido a que no existe ");
             }
             return res;

@@ -13,7 +13,7 @@ namespace Servicios
         public override int AddEntity(TipoEvento entity)
         {
 
-            int res = 1;
+            int res = 0;
             // Crear TipoEvento
             TipoEvento Tipo_Evento = GetEntity(entity.IdTipoEvento);
             if (Tipo_Evento == null)
@@ -26,7 +26,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+             
                 throw new ArgumentException("No se logro Registrar el Tipo de Evento, debido a que ya existe");
             }
             return res;
@@ -44,7 +44,7 @@ namespace Servicios
 
         public override int DeleteEntity(object key)
         {
-            int res = 1;
+            int res = 0;
             TipoEvento Tipo_Evento = GetEntity(key);
             if (Tipo_Evento != null)
             {
@@ -53,8 +53,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
-                throw new ArgumentException("No se puede Eliminar Tipo Evento , debido a que no existe ");
+                   throw new ArgumentException("No se puede Eliminar Tipo Evento , debido a que no existe ");
 
             }
             return res;
@@ -74,7 +73,7 @@ namespace Servicios
 
         public override int UpdateEntity(TipoEvento entity)
         {
-            int res = 1;
+            int res = 0;
             TipoEvento Tipo_Evento = GetEntity(entity.IdTipoEvento);
             if (Tipo_Evento != null)
             {
@@ -84,7 +83,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+               
                 throw new ArgumentException("No se puede actualizar los Datos De Tipo de Evento, debido a que no existe");
             }
             return res;

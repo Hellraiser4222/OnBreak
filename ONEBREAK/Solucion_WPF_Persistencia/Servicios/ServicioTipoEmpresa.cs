@@ -13,7 +13,7 @@ namespace Servicios
         public override int AddEntity(TipoEmpresa entity)
         {
 
-            int res = 1;
+            int res = 0;
             // Crear TipoEmpresa
             TipoEmpresa Tipo_Empresa = GetEntity(entity.IdTipoEmpresa);
             if (Tipo_Empresa == null)
@@ -26,7 +26,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+                
                 throw new ArgumentException("No se logro Registrar el Tipo Empresa,debido a que ya existe");
             }
             return res;
@@ -91,7 +91,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+            
                 throw new ArgumentException("No se puede actualizar los Datos De Tipo de Empresa, Ya que no existe ");
             }
             return res;

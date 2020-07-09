@@ -14,33 +14,23 @@ namespace Servicios
 
         public override int AddEntity(Contrato entity)
         {
-            int res = 1;
+            int res = 0;
 
            
             // Crear Contrato
             Contrato contrato = GetEntity(entity.Numero);
             if (contrato == null)
             {
-                try { 
+               
                 em.Contrato.Add(entity);
                 //Guardar Cambios
                 res=em.SaveChanges();
-                }
-                catch(SqlException ex)
-                {
-                    String msg = "";
-                    if (ex.Number == 1405)
-                        msg = "Valor de clave primaria Repetido";
-                    if (ex.Number == 23401)
-                        msg = "Falta definir el valor de la Propiedad";
-                    throw new Exception(msg);
-
-
-                }
+              
+                
             }
             else
             {
-                res = -1;
+                
                 throw new ArgumentException("No se logro Registrar el Contrato,contrato ya existente");
             }
             return res;
@@ -57,16 +47,21 @@ namespace Servicios
 
         public override int DeleteEntity(object key)
         {
-            int res = 1;
+            int res = 0;
             Contrato contrato = GetEntity(key);
             if (contrato != null)
             {
+                if (string.IsNullOrEmpty((string)key))
+                {
+                    throw new ArgumentException("Valor del numero contrato no puede ser vacio");
+                }
+
                 em.Contrato.Remove(contrato);
                 res=em.SaveChanges();
             }
             else
             {
-                res = -1;
+               ;
                 throw new ArgumentException("No se puede Eliminar Contrato , debido a que no  existe o hay un campo vacio  ");
 
             }
@@ -88,7 +83,7 @@ namespace Servicios
 
         public override int UpdateEntity(Contrato entity)
         {
-            int res = 1;
+            int res = 0;
             Contrato contrato = GetEntity(entity.Numero);
             if (contrato != null)
             {
@@ -110,7 +105,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+             
                 throw new ArgumentException("No se puede actualizar los Datos de Contrato,debido a que no existe ");
             }
             return res;

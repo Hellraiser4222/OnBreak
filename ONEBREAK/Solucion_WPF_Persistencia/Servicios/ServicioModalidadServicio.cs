@@ -12,7 +12,7 @@ namespace Servicios
     {
         public override int  AddEntity(ModalidadServicio entity)
         {
-            int res = 1;
+            int res = 0;
 
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio == null)
@@ -25,7 +25,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+              
                 throw new ArgumentException("No se logro Registrar La Modalidad de Servicio");
             }
             return res;
@@ -42,7 +42,7 @@ namespace Servicios
 
         public override int  DeleteEntity(object key)
         {
-            int res = 1;
+            int res = 0;
            
             ModalidadServicio Modalidad_Servicio = GetEntity(key);
             if (Modalidad_Servicio != null)
@@ -52,7 +52,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+                ;
                 throw new ArgumentException("No se puede Eliminar la Modalidad de servicio, debido a que no existe o hay un campo vacio ");
 
             }
@@ -74,7 +74,7 @@ namespace Servicios
         public override int UpdateEntity(ModalidadServicio entity)
         {
 
-            int res = 1;
+            int res = 0;
 
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio != null)
@@ -87,7 +87,7 @@ namespace Servicios
             }
             else
             {
-                res = -1;
+               
                 throw new ArgumentException("No se puede actualizar los Datos de la Modalidad de Servicio, debido a que no existe o se encuentra un campo vacio");
             }
             return res;
