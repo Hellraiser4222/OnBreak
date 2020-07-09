@@ -83,6 +83,13 @@ namespace Servicios
 
         public override int UpdateEntity(Cliente entity)
         {
+
+            if (string.IsNullOrEmpty(entity.RutCliente))
+            {
+                throw new ArgumentException("Valor del tipo de empresa no puede ser vacio debe  ser un numero entero mayor");
+            }
+
+
             int res = 0;
             Cliente cliente = GetEntity(entity.RutCliente);
             if (cliente != null)
