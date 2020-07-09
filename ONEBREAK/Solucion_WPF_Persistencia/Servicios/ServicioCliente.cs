@@ -14,36 +14,25 @@ namespace Servicios
         public override int AddEntity(Cliente entity)
         {
 
-            int res = 0;
             // Crear Cliente
             Cliente cliente = GetEntity(entity.RutCliente);
+            int res = 0;
             if (cliente == null)
             {
-                try
-                {
-                    // Insertar una actividad empresa
-                    em.Cliente.Add(entity);
+              
+
+                // Insertar una actividad empresa
+                em.Cliente.Add(entity);
                     //Guardar Cambios
-                    res = em.SaveChanges();
-                }
-                catch(SqlException ex)
-                {
-                    String msg = "";
-                    if (ex.Number == 1405)
-                        msg = "Valor de clave primaria Repetido";
-                    if (ex.Number == 23401)
-                        msg = "Falta definir el valor de la Propiedad";
-                    throw new Exception(msg);
-                }
+                   res= em.SaveChanges();
             }
             else
-            {
-                res = -1;
-                throw new ArgumentException("Cliente ya existe, no es posible registrar.") ;
-            }
+             {
+                    throw new ArgumentException("Cliente ya existe, no es posible registrar.");
+             }
 
 
-            return res;
+           return res;
 
 
         }
@@ -59,12 +48,17 @@ namespace Servicios
             Cliente cliente = GetEntity(key);
             if (cliente != null)
             {
+                if (string.IsNullOrEmpty((string)key))
+                {
+                    throw new ArgumentException("Valor del rut no puede ser vacio");
+                }
+
                 em.Cliente.Remove(cliente);
-                res=em.SaveChanges();
+                res = em.SaveChanges();
+                 
             }
             else
             {
-                res = -1;
                 throw new ArgumentException("No se puede Eliminar Cliente , debido a que no existe o esta relacionado  ");
 
             }
@@ -98,12 +92,12 @@ namespace Servicios
                 cliente.IdTipoEmpresa = entity.IdTipoEmpresa;
                 cliente.MailContacto = entity.MailContacto;
                 cliente.Telefono = entity.Telefono;
-                res=em.SaveChanges();
+              
+                res = em.SaveChanges(); ;
             }
             else
             {
-                res = -1;
-                throw new ArgumentException("No se puede actualizar los Datos de Cliente,debido a que no existe ");
+                 throw new ArgumentException("No se puede actualizar los Datos de Cliente,debido a que no existe ");
             }
             return res;
         }

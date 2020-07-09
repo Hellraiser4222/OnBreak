@@ -75,6 +75,13 @@ namespace Servicios
         public override int UpdateEntity(TipoEmpresa entity)
         {
             int res = 1;
+
+            if (entity.IdTipoEmpresa <= -1)
+            {
+                throw new ArgumentException("Valor del tipo de empresa no puede ser vacio debe  ser un numero entero mayor");
+            }
+
+
             TipoEmpresa Tipo_Empresa = GetEntity(entity.IdTipoEmpresa);
             if (Tipo_Empresa != null)
             {

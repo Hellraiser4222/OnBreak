@@ -13,14 +13,13 @@ namespace Servicios.Tests
     [TestClass()]
     public class ServicioClienteTests
     {
-        // / <summary>
-        /// Pruebas unitarias a metodo AddEntity Cliente
-        /// </summary>
+        //// / <summary>
+        ///// Pruebas unitarias a metodo AddEntity Cliente
+        ///// </summary>
         [TestMethod()]
         public void AgregarClienteConExito()
         {
-            try
-            {
+           
                 //PRUEBA EXITOSA- registar un nuevo cliente, alcance el cliente 666 no debe existir en la bd.
                 Cliente clientetest = new Cliente();
                 clientetest.RutCliente = "636";
@@ -33,57 +32,53 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.AddEntity(clientetest);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+                //bool res = sc.AddEntity(clientetest);
+                // Assert.AreEqual(true, res);
+                Assert.ThrowsException<ArgumentException>(() => sc.AddEntity(clientetest));
+         
 
         }
 
-        [TestMethod()]
-        public void AgregarClienteSinExitoFaltaDato()
-        {
-            try
-            {
-                //PRUEBA CON ERROR- NO SE GRABA PORQUE FALTA CAMPO OBLIGATORIO
-                Cliente clientetest = new Cliente();
-                clientetest.RutCliente = "";
-                clientetest.RazonSocial = "Servicio";
-                clientetest.NombreContacto = "Juanito";
-                clientetest.MailContacto = "juan@hot";
-                clientetest.Telefono = "23243254";
-                clientetest.Direccion = "calle mermelada 123";
-                clientetest.IdTipoEmpresa = 10;
-                clientetest.IdActividadEmpresa = 1;
+        //[TestMethod()]
+        //public void AgregarClienteSinExitoFaltaDato()
+        //{
+        //    try
+        //    {
+        //        //PRUEBA CON ERROR- NO SE GRABA PORQUE FALTA CAMPO OBLIGATORIO
+        //        Cliente clientetest = new Cliente();
+        //        clientetest.RutCliente = "";
+        //        clientetest.RazonSocial = "Servicio";
+        //        clientetest.NombreContacto = "Juanito";
+        //        clientetest.MailContacto = "juan@hot";
+        //        clientetest.Telefono = "23243254";
+        //        clientetest.Direccion = "calle mermelada 123";
+        //        clientetest.IdTipoEmpresa = 10;
+        //        clientetest.IdActividadEmpresa = 1;
 
-                if (string.IsNullOrEmpty(clientetest.RutCliente))
-                {
-                    throw new Exception("Valor del rut no puede ser vacio");
-                }
+        //        if (string.IsNullOrEmpty(clientetest.RutCliente))
+        //        {
+        //            throw new Exception("Valor del rut no puede ser vacio");
+        //        }
 
 
-                ServicioCliente sc = new ServicioCliente();
-                int res = sc.AddEntity(clientetest);
+        //        ServicioCliente sc = new ServicioCliente();
+        //        bool res = sc.AddEntity(clientetest);
+        //        Assert.AreEqual(true, res);
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw (ex);
 
-            }
+        //    }
 
-        }
+        //}
 
 
         [TestMethod()]
         public void AgregarClienteSinExitoYaExiste()
         {
-            try
-            {
+            
                 //PRUEBA CON ERROR- NO SE GRABA PORQUE porque ya existe
                 Cliente clientetest = new Cliente();
                 clientetest.RutCliente = "201113334";
@@ -96,27 +91,52 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.AddEntity(clientetest);
+                //bool res = sc.AddEntity(clientetest);
+                //Assert.AreEqual(true, res);
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
+                Assert.ThrowsException<ArgumentException>(() => sc.AddEntity(clientetest));
 
+         
+        }
+        [TestMethod()]
+        public void AgregarClienteSinExitoVacio()
+        {
 
+            //PRUEBA CON ERROR- NO SE GRABA PORQUE porque ya existe
+            Cliente clientetest = new Cliente();
+            clientetest.RutCliente = "";
+            clientetest.RazonSocial = "Servicio";
+            clientetest.NombreContacto = "Juanito";
+            clientetest.MailContacto = "juan@hot";
+            clientetest.Telefono = "23243254";
+            clientetest.Direccion = "calle mermelada 123";
+            clientetest.IdTipoEmpresa = 10;
+            clientetest.IdActividadEmpresa = 1;
 
-            }
+            ServicioCliente sc = new ServicioCliente();
+            Assert.ThrowsException<ArgumentException>(() => sc.AddEntity(clientetest));
+
 
         }
 
-        /// <summary>
-        /// //Pruebas Unitarias a Metodo DeleteEntity
-        /// 
+
+
+
+
+
+
+
+
+
+
+
+        ///// <summary>
+        ///// //Pruebas Unitarias a Metodo DeleteEntity
+        ///// 
         [TestMethod()]
         public void EliminarClienteconExito()
         {
-            try
-            {
+           
                 //PRUEBA EXITOSA- Eliminar el cliente 666  de la  bd.
                 Cliente clientetest = new Cliente();
 
@@ -130,22 +150,17 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.DeleteEntity(clientetest.RutCliente);
+              
+                Assert.ThrowsException<ArgumentException>(() => sc.DeleteEntity(clientetest.RutCliente));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+         
 
         }
 
         [TestMethod()]
         public void EliminarClientesinExito_noExiste()
         {
-            try
-            {
+          
                 //PRUEBA sin exito - Eliminar cliente que no esta en base de datos
                 Cliente clientetest = new Cliente();
 
@@ -159,21 +174,17 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.DeleteEntity(clientetest.RutCliente);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+                //bool res = sc.DeleteEntity(clientetest.RutCliente);
+                //Assert.AreEqual(true, res);
+                Assert.ThrowsException<ArgumentException>(() => sc.DeleteEntity(clientetest.RutCliente));
+           
 
         }
 
+        [TestMethod()]
         public void EliminarClientesinExitoFaltaDato()
         {
-            try
-            {
+          
                 //PRUEBA sin exito - Eliminar cliente que no esta en base de datos
                 Cliente clientetest = new Cliente();
 
@@ -186,20 +197,12 @@ namespace Servicios.Tests
                 clientetest.IdTipoEmpresa = 10;
                 clientetest.IdActividadEmpresa = 1;
 
-                if (string.IsNullOrEmpty(clientetest.RutCliente))
-                {
-                    throw new Exception("Valor del rut no puede ser vacio");
-                }
+              
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.DeleteEntity(clientetest.RutCliente);
+                Assert.ThrowsException<ArgumentException>(() => sc.DeleteEntity(clientetest.RutCliente));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+            
 
         }
 
@@ -210,9 +213,8 @@ namespace Servicios.Tests
         [TestMethod()]
         public void ActualizarclienteconExito()
         {
-            try
-            {
-                // PRUEBA EXITOSA-Actualizar cliente ya existente
+            
+            // PRUEBA EXITOSA-Actualizar cliente ya existente
                 Cliente clientetest = new Cliente();
 
 
@@ -226,16 +228,9 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.UpdateEntity(clientetest);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-
-
-            }
+            //bool res = sc.UpdateEntity(clientetest);
+            //Assert.AreEqual(true, res);
+            Assert.ThrowsException<ArgumentException>(() => sc.UpdateEntity(clientetest));
         }
 
 
@@ -243,8 +238,7 @@ namespace Servicios.Tests
         [TestMethod()]
         public void ActualizarclienteSinExito()
         {
-            try
-            {
+          
                 // PRUEBA sin exito por que no existe el cliente
                 Cliente clientetest = new Cliente();
 
@@ -259,22 +253,16 @@ namespace Servicios.Tests
                 clientetest.IdActividadEmpresa = 1;
 
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.UpdateEntity(clientetest);
+            
+            Assert.ThrowsException<ArgumentException>(() => sc.UpdateEntity(clientetest));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
         }
 
 
         [TestMethod()]
         public void ActualizarclienteSinExitoDatoVacio()
         {
-            try
-            {
+            
                 // PRUEBA sin exito por que no hay un dato vacio 
                 Cliente clientetest = new Cliente();
 
@@ -288,21 +276,14 @@ namespace Servicios.Tests
                 clientetest.IdTipoEmpresa = 10;
                 clientetest.IdActividadEmpresa = 1;
 
-                if (string.IsNullOrEmpty(clientetest.RutCliente))
-                {
-                    throw new Exception("Valor del rut no puede ser vacio");
-                }
-
+             
                 ServicioCliente sc = new ServicioCliente();
-                int res = sc.UpdateEntity(clientetest);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+            
+                 Assert.ThrowsException<ArgumentException>(() => sc.UpdateEntity(clientetest));
         }
+
+
+
     }
 }
 
