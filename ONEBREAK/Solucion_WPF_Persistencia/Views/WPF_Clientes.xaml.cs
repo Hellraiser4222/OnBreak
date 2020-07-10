@@ -54,7 +54,7 @@ namespace Views
             try
             {
                 List<TipoEmpresa> tipoEmpresa = te.GetEntities();
-                cmbTipoEmpresa.ItemsSource =tipoEmpresa;
+                cmbTipoEmpresa.ItemsSource = tipoEmpresa;
                 cmbTipoEmpresa.SelectedValuePath = "IdTipoEmpresa";
                 cmbTipoEmpresa.DisplayMemberPath = "Descripcion";
             }
@@ -96,7 +96,7 @@ namespace Views
                     await this.ShowMessageAsync("Error:", "Debes ingresar un nombre válido");
                     return;
                 }
-                if(txtrazon.Text.Trim().Length>0)
+                if (txtrazon.Text.Trim().Length > 0)
                 {
                     razon = txtrazon.Text;
                 }
@@ -132,7 +132,7 @@ namespace Views
                     await this.ShowMessageAsync("Error:", "Debes ingresar un numero de telefono válido");
                     return;
                 }
-                if (cmbActividadEmpresa.SelectedIndex >-1)
+                if (cmbActividadEmpresa.SelectedIndex > -1)
                 {
                     act_empresa = (int)cmbActividadEmpresa.SelectedValue;
                 }
@@ -141,7 +141,7 @@ namespace Views
                     await this.ShowMessageAsync("Error:", "Debes ingresar una actividad de empresa válida");
                     return;
                 }
-                if (cmbTipoEmpresa.SelectedIndex >-1)
+                if (cmbTipoEmpresa.SelectedIndex > -1)
                 {
                     tipo_empresa = (int)cmbTipoEmpresa.SelectedValue;
                 }
@@ -164,7 +164,7 @@ namespace Views
                 };
                 sc.AddEntity(cliente);
                 await this.ShowMessageAsync("Exito:", "Datos del autor registrados correctamente!!!", MessageDialogStyle.Affirmative);
-                
+
             }
             catch (ArgumentException ex)
             {
@@ -223,7 +223,7 @@ namespace Views
                     string rut = txtbuscaRut.Text;
                     sc.DeleteEntity(rut);
                     await this.ShowMessageAsync("Exito:", "Datos del cliente eliminados!!!", MessageDialogStyle.Affirmative);
-                    
+
                 }
             }
             catch (ArgumentException ex)
@@ -256,15 +256,15 @@ namespace Views
                     txttelefono.Text = cliente.Telefono;
                     cmbActividadEmpresa.SelectedValue = cliente.IdActividadEmpresa;
                     cmbTipoEmpresa.SelectedValue = cliente.IdTipoEmpresa;
-                    
+
                 }
                 else
                 {
                     await this.ShowMessageAsync("Error:", "Debe ingresar un rut valido");
                 }
-               
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await this.ShowMessageAsync("Error:", "No se ha podido encontrar al cliente." + ex.Message);
             }
@@ -306,7 +306,7 @@ namespace Views
             txttelefono.Text = string.Empty;
             cmbActividadEmpresa.SelectedIndex = -1;
             cmbTipoEmpresa.SelectedIndex = -1;
-            
+
         }
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
         {

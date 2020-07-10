@@ -16,15 +16,10 @@ using MahApps.Metro.Controls.Dialogs;
 using PersistenciaBD;
 using Servicios;
 
-/// <summary>
-/// revisar get entities
-/// </summary>
+
 namespace Views
 {
-    /// <summary>
-    /// Lógica de interacción para WPF_ListadoClientes.xaml
-    /// </summary>
-    /// 
+
 
     public partial class WPF_ListadoClientes : MetroWindow
     {
@@ -111,7 +106,7 @@ namespace Views
             FiltrarListado();
         }
 
-       
+
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -129,6 +124,12 @@ namespace Views
                 wc.CargarDatosClienteExterno(cliente);
                 this.Close();
             }
+            else if (parent == "WPF_ListadoClientes")
+            {
+                WPF_Clientes wc = (WPF_Clientes)this.Owner;
+                wc.CargarDatosClienteExterno(cliente);
+                this.Close();
+            }
             else if (parent == "WPFMenu")
             {
                 WPF_Clientes wc = new WPF_Clientes();
@@ -139,3 +140,4 @@ namespace Views
         }
     }
 }
+

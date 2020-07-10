@@ -21,7 +21,7 @@
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
         <Image Source="Resources/pngguru.com.png" HorizontalAlignment="Left" Height="66" Margin="155,11,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.507,-0.114" Grid.Column="1"/>
-        <Label Content="Raul Ramirez Perez" HorizontalAlignment="Left" Margin="41,37,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Label Content="Raul Ramirez Perez" HorizontalAlignment="Left" Margin="41,37,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Height="26">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,45 +33,48 @@
         </Label>
         <Image  Source="Resources/logo_transparent_background.png" HorizontalAlignment="Left" Height="639" Margin="82,169,0,0" VerticalAlignment="Top" Width="635" Grid.ColumnSpan="2" Opacity="0.5"/>
         <Image HorizontalAlignment="Left" Source="Resources/logo_transparent_background.png" Height="100" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.38,0.39"/>
-        <Label x:Name="lblContrato" Content="NUEVO CONTRATO" HorizontalAlignment="Left" Margin="129,33,0,0" VerticalAlignment="Top" Width="317" Foreground="Gray" FontSize="36"/>
-        <Label x:Name="lblNro" Content="N° de &#xD;&#xA;Contrato:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblHraTermino" Content="Hora de Termino:" HorizontalAlignment="Left" Margin="13,601,0,0" VerticalAlignment="Top" Foreground="#FF686868" FontSize="20" RenderTransformOrigin="0.497,0.095"/>
-        <Label x:Name="lblHraInicio" Content="Hora de Inicio:" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Foreground="#FF686868" FontSize="20" RenderTransformOrigin="0.46,-0.041"/>
-        <Label x:Name="lblTipoEvento" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="13,314,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblIDModalidad" Content="Modalidad:" HorizontalAlignment="Left" Margin="13,254,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblRut" Content="Rut del&#xD;&#xA;Cliente:" HorizontalAlignment="Left" Margin="13,186,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblTermino" Content="Termino:" HorizontalAlignment="Left" Margin="590,461,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="20" RenderTransformOrigin="5.588,5.797" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblCreacion" Content="Creacion:" HorizontalAlignment="Left" Margin="398,461,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="20"/>
-        <Label x:Name="lblAsistentes" Content="Cantidad de &#xD;&#xA;Asistentes:" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" RenderTransformOrigin="0.463,0.762"/>
-        <Label x:Name="lblPersonal" Content="Personal:" HorizontalAlignment="Left" Margin="10,436,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblRealizado" Content="Realizado:" HorizontalAlignment="Left" Margin="390,128,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblValorContrato" Content="Valor del Contrato:" HorizontalAlignment="Left" Margin="390,186,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <Label x:Name="lblObservaciones" Content="Observaciones:" HorizontalAlignment="Left" Margin="390,243,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20"/>
-        <TextBox x:Name="txtNroContrato" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="134,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="#FF1190CB" />
-        <TextBox x:Name="txtObservaciones" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="159" Margin="390,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405" Background="#FF1190CB" Grid.ColumnSpan="2" />
-        <TextBox x:Name="txtRut" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="134,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="#FF1190CB" />
-        <TextBox x:Name="txtPersonal" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="134,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="#FF1190CB" />
-        <TextBox x:Name="txtValor" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="570,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Background="#FF1190CB" Grid.ColumnSpan="2" />
-        <TextBox x:Name="txtCantAsistentes" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="132,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Background="#FF1190CB" />
-        <ComboBox x:Name="cmbModalidad" Margin="134,256,253,642" Background="#FF1190CB" BorderBrush="White"/>
-        <ComboBox x:Name="cmbTipoEvento" Margin="134,316,253,582" Background="#FF1190CB" BorderBrush="White"/>
-        <CheckBox x:Name="chkSi" Content="CheckBox" HorizontalAlignment="Left" Margin="494,141,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" />
-        <CheckBox x:Name="chkNo" Content="CheckBox" HorizontalAlignment="Left" Margin="590,141,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" Grid.ColumnSpan="2"/>
-        <Label Content="SI" HorizontalAlignment="Left" Margin="527,128,0,0" VerticalAlignment="Top" Width="38" Foreground="Gray" FontSize="20" RenderTransformOrigin="1.066,0.595"/>
-        <Label Content="NO" HorizontalAlignment="Left" Margin="612,128,0,0" VerticalAlignment="Top" Width="38" Foreground="Gray" FontSize="20" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtHraTermino" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="13,643,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Background="#FF1190CB" />
-        <TextBox x:Name="txtIHranicio" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="10,566,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Background="#FF1190CB" />
-        <Label x:Name="lblContrato_Copy" Content="CARGAR CONTRATO" HorizontalAlignment="Left" Margin="13,722,0,0" VerticalAlignment="Top" Width="354" Foreground="White" FontSize="36"/>
-        <Button x:Name="btnRegistrar" Style="{StaticResource AccentedSquareButtonStyle}" Content=" Registrar Contrato" HorizontalAlignment="Left" Margin="378,768,0,0" VerticalAlignment="Top" Width="187" Height="54"  FontSize="18"/>
+        <Label x:Name="lblContrato" Content="NUEVO CONTRATO" HorizontalAlignment="Left" Margin="129,33,0,0" VerticalAlignment="Top" Width="317" Foreground="Gray" FontSize="36" Height="58"/>
+        <Label x:Name="lblNro" Content="N° de &#xD;&#xA;Contrato:" HorizontalAlignment="Left" Margin="7,553,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="63" Width="92"/>
+        <Label x:Name="lblHraTermino" Content="Hora de Termino:" HorizontalAlignment="Left" Margin="10,471,0,0" VerticalAlignment="Top" Foreground="#FF686868" FontSize="20" RenderTransformOrigin="0.497,0.095" Height="37" Width="162"/>
+        <Label x:Name="lblHraInicio" Content="Hora de Inicio:" HorizontalAlignment="Left" Margin="8,402,0,0" VerticalAlignment="Top" Foreground="#FF686868" FontSize="20" RenderTransformOrigin="0.46,-0.041" Height="37" Width="138"/>
+        <Label x:Name="lblTipoEvento" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="0,184,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Width="122" Height="37"/>
+        <Label x:Name="lblIDModalidad" Content="Modalidad:" HorizontalAlignment="Left" Margin="8,241,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" RenderTransformOrigin="0.45,0.365" Height="37" Width="109"/>
+        <Label x:Name="lblRut" Content="Rut del&#xD;&#xA;Cliente:" HorizontalAlignment="Left" Margin="24,119,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="63" Width="75"/>
+        <Label x:Name="lblTermino" Content="Termino:" HorizontalAlignment="Left" Margin="612,371,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="20" RenderTransformOrigin="5.588,5.797" Grid.ColumnSpan="2" Height="37" Width="85"/>
+        <Label x:Name="lblCreacion" Content="Creacion:" HorizontalAlignment="Left" Margin="398,371,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="20" Height="37" Width="91"/>
+        <Label x:Name="lblAsistentes" Content="Cantidad de &#xD;&#xA;Asistentes:" HorizontalAlignment="Left" Margin="1,283,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" RenderTransformOrigin="0.463,0.762" Height="63" Width="122"/>
+        <Label x:Name="lblPersonal" Content="Personal:" HorizontalAlignment="Left" Margin="8,351,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" RenderTransformOrigin="0.669,-0.514" Height="37" Width="89"/>
+        <Label x:Name="lblRealizado" Content="Realizado:" HorizontalAlignment="Left" Margin="390,128,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="37" Width="99"/>
+        <Label x:Name="lblValorContrato" Content="Valor del Contrato:" HorizontalAlignment="Left" Margin="1,686,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="37" Width="175"/>
+        <Label x:Name="lblObservaciones" Content="Observaciones:" HorizontalAlignment="Left" Margin="390,170,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="37" Width="143"/>
+        <TextBox x:Name="txtNroContrato" MaxLength="9" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="30" Margin="122,571,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Background="#FF1190CB" IsReadOnly="True"  />
+        <TextBox x:Name="txtObservaciones" MaxLength="120" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="159" Margin="390,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405" Background="#FF1190CB" Grid.ColumnSpan="2" />
+        <TextBox x:Name="txtPersonal" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="122,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Background="#FF1190CB" />
+        <TextBox x:Name="txtValor" MaxLength="12" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="30" Margin="176,687,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Background="#FF1190CB" IsReadOnly="True" />
+        <TextBox x:Name="txtCantAsistentes" MaxLength="9" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="122,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Background="#FF1190CB" />
+        <ComboBox x:Name="cmbModalidad" Margin="122,243,265,655" Background="#FF1190CB" BorderBrush="White"/>
+        <ComboBox x:Name="cmbTipoEvento" Margin="122,186,265,712" Background="#FF1190CB" BorderBrush="White" SelectionChanged="CmbTipoEvento_SelectionChanged"/>
+        <TextBox x:Name="txtHraTermino" MaxLength="5" Controls:TextBoxHelper.Watermark="HH:RR" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="8,508,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Background="#FF1190CB" />
+        <TextBox x:Name="txtIHranicio" MaxLength="5" Controls:TextBoxHelper.Watermark="HH:RR" VerticalContentAlignment="Center" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="30" Margin="10,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Background="#FF1190CB" />
+        <Label x:Name="lblContrato_Copy" Content="CARGAR CONTRATO" HorizontalAlignment="Left" Margin="13,722,0,0" VerticalAlignment="Top" Width="354" Foreground="White" FontSize="36" Height="58"/>
+        <Button x:Name="btnRegistrar" Style="{StaticResource AccentedSquareButtonStyle}" Content=" Registrar Contrato" HorizontalAlignment="Left" Margin="379,774,0,0" VerticalAlignment="Top" Width="187" Height="54"  FontSize="18" Click="BtnRegistrar_Click"/>
         <Button x:Name="btnModificar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Modificar Contrato" HorizontalAlignment="Left" Margin="378,845,0,0" VerticalAlignment="Top" Width="188" Height="54"  FontSize="16"/>
         <TextBox x:Name="txtbuscaRut" MaxLength="10" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Ingrese el Rut" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="37" Margin="13,785,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Background="#FF1190CB" FontSize="20"/>
         <Button x:Name="btnBuscar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Buscar" HorizontalAlignment="Left" Margin="13,848,0,0" VerticalAlignment="Top" Width="135" Height="51" />
-        <Button x:Name="btnEliminar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Eliminar" HorizontalAlignment="Left" Margin="179,848,0,0" VerticalAlignment="Top" Width="127" Height="51"  RenderTransformOrigin="0.354,1.883"/>
-        <Label x:Name="lblListado" Content="Mostrar Listado&#xA;   de Contratos" HorizontalAlignment="Left" Margin="606,768,0,0" VerticalAlignment="Top" Width="194" Foreground="White" FontSize="26" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblListado" Content="Mostrar Listado&#xA;   de Contratos" HorizontalAlignment="Left" Margin="606,768,0,0" VerticalAlignment="Top" Width="194" Foreground="White" FontSize="26" Grid.ColumnSpan="2" Height="79"/>
         <Button x:Name="btnMostarListado"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Mostrar" HorizontalAlignment="Left" Margin="11,852,0,0" VerticalAlignment="Top" Width="135" Height="44" FontSize="20"  Grid.Column="1" Click="BtnMostarListado_Click"/>
         <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="144" Margin="590,768,0,0" VerticalAlignment="Top" Width="215" Grid.ColumnSpan="2"/>
-        <DatePicker x:Name="dtpInicio" HorizontalAlignment="Left" Margin="346,498,0,0" VerticalAlignment="Top" Background="#FF1190CB" Height="30" Width="187" FontFamily="Segoe UI" FontSize="16"/>
-        <DatePicker x:Name="dtpTermino" HorizontalAlignment="Left" Margin="570,498,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="#FF1190CB" Height="30" Width="196" FontSize="16"/>
+        <DatePicker x:Name="dtpInicio" HorizontalAlignment="Left" Margin="398,404,0,0" VerticalAlignment="Top" Background="#FF1190CB" Height="30" Width="187" FontFamily="Segoe UI" FontSize="16"/>
+        <DatePicker x:Name="dtpTermino" HorizontalAlignment="Left" Margin="612,402,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="#FF1190CB" Height="30" Width="196" FontSize="16"/>
+        <Button x:Name="btnAceptar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Aceptar" HorizontalAlignment="Left" Margin="240,467,0,0" VerticalAlignment="Top" Width="127" Height="51"  RenderTransformOrigin="0.354,1.883" Click="BtnAceptar_Click" FontSize="16"/>
+        <Button x:Name="btnLimpiar" Style="{StaticResource AccentedSquareButtonStyle}" Content="Nuevo" HorizontalAlignment="Left" Margin="379,688,0,0" VerticalAlignment="Top" Width="186" Height="59"  RenderTransformOrigin="0.354,1.883" Click="BtnLimpiar_Click" FontSize="20"/>
+        <Label x:Name="lblValorAsis" Content="Valor Personal:" HorizontalAlignment="Left" Margin="1,653,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="37" Width="153"/>
+        <Label x:Name="lblValorPerso" Content="Valor Asistentes:" HorizontalAlignment="Left" Margin="1,616,0,0" VerticalAlignment="Top" Foreground="Gray" FontSize="20" Height="37" Width="153"/>
+        <TextBox x:Name="txtValorPerso" MaxLength="12" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="30" Margin="159,653,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FF1190CB" IsReadOnly="True" />
+        <TextBox x:Name="txtValorAsis" MaxLength="12" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="30" Margin="159,616,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Background="#FF1190CB" IsReadOnly="True" />
+        <RadioButton x:Name="rdbSI" Content="SI" HorizontalAlignment="Left" Margin="494,135,0,0" VerticalAlignment="Top" Height="24" Width="61" RenderTransformOrigin="0.568,0.312" Foreground="Gray" FontSize="20"/>
+        <RadioButton x:Name="rdbNO" Content="NO" HorizontalAlignment="Left" Margin="560,135,0,0" VerticalAlignment="Top" Height="24" Width="50" RenderTransformOrigin="0.568,0.312" Foreground="Gray" FontSize="16"/>
+        <ComboBox x:Name="cmbRut" Margin="122,134,265,764" Background="#FF1190CB" BorderBrush="White"/>
 
     </Grid>
 </Controls:MetroWindow>

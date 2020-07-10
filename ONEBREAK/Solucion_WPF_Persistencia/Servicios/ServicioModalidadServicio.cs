@@ -7,11 +7,13 @@ using PersistenciaBD;
 
 namespace Servicios
 {
+
     public class ServicioModalidadServicio : AbstractService<ModalidadServicio>
     {
+        private OnBreakEntities conexion = new OnBreakEntities();
         public override void AddEntity(ModalidadServicio entity)
         {
-           
+
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio == null)
             {
@@ -38,7 +40,7 @@ namespace Servicios
 
         public override void DeleteEntity(object key)
         {
-           
+
             ModalidadServicio Modalidad_Servicio = GetEntity(key);
             if (Modalidad_Servicio != null)
             {
@@ -60,13 +62,13 @@ namespace Servicios
 
         public override List<ModalidadServicio> GetEntity()
         {
-            
+
             return em.ModalidadServicio.ToList<ModalidadServicio>();
         }
 
         public override void UpdateEntity(ModalidadServicio entity)
         {
-            
+
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio != null)
             {
@@ -79,6 +81,24 @@ namespace Servicios
             else
             {
                 throw new ArgumentException("No se puede actualizar los Datos de la Modalidad de Servicio");
+            }
+        }
+
+        public IEnumerable<object> ListadoModalidad(int IdTipoEvento)
+        {
+            try
+            {
+                var listado = (from m in conexion.ModalidadServicio
+                               where
+                               m.IdTipoEvento == IdTipoEvento
+                               select m).ToList();
+                return listado;
+
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Nos se pueden cargar los datos.", ex);
+
             }
         }
     }
