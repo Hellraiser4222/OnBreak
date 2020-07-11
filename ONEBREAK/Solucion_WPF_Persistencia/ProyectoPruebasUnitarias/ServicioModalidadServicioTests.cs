@@ -66,8 +66,8 @@ namespace Servicios.Tests
                 //PRUEBA sin exito por que ya existe 
                 ModalidadServicio Modalidadtest = new ModalidadServicio();
 
-                Modalidadtest.IdModalidad = "CA001";
-                Modalidadtest.Nombre = "Matrimonio";
+                Modalidadtest.IdModalidad = "CB002";
+                Modalidadtest.Nombre = "Journal Break";
                 Modalidadtest.IdTipoEvento = 20;
                 Modalidadtest.ValorBase = 2000000;
                 Modalidadtest.PersonalBase = 35;
@@ -170,7 +170,7 @@ namespace Servicios.Tests
                 //PRUEBA sin exito -Se elimina Modalidad que no existe
                 ModalidadServicio Modalidadtest = new ModalidadServicio();
 
-                Modalidadtest.IdModalidad = "CA001";
+                Modalidadtest.IdModalidad = "CD0001";
                 Modalidadtest.Nombre = "Matrimonio";
                 Modalidadtest.IdTipoEvento = 20;
                 Modalidadtest.ValorBase = 2000000;
