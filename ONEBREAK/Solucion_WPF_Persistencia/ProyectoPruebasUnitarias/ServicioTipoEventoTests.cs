@@ -15,8 +15,6 @@ namespace Servicios.Tests
         [TestMethod()]
         public void AgregarTipoEventoConExito()
         {
-            try
-            {
                 //PRUEBA EXITOSA- registar una nuevo tipo evento
                 TipoEvento tipoEventotest = new TipoEvento();
 
@@ -26,14 +24,8 @@ namespace Servicios.Tests
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.AddEntity(tipoEventotest);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
+               
+                //Assert.ThrowsException<ArgumentException>(() => stev.AddEntity(tipoEventotest));
 
         }
 
@@ -41,29 +33,19 @@ namespace Servicios.Tests
         [TestMethod()]
         public void AgregarTipoEventoSinExitoYaExiste()
         {
-            try
-            {
+            
                 //PRUEBA no EXITOSA-  registrar un tipo evento que ya existe 
                 TipoEvento tipoEventotest = new TipoEvento();
 
-                tipoEventotest.IdTipoEvento = 40;
-                tipoEventotest.Descripcion = "Matrimonio";
+                tipoEventotest.IdTipoEvento = 10;
+                tipoEventotest.Descripcion = "Coffee Break";
 
 
-                if (tipoEventotest.IdTipoEvento <= -1)
-                {
-                    throw new Exception("Valor del tipo evento no puede estar vacio debe contener un numero mayor");
-                }
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.AddEntity(tipoEventotest);
+                Assert.ThrowsException<ArgumentException>(() => stev.AddEntity(tipoEventotest));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
 
-            }
 
         }
 
@@ -71,39 +53,29 @@ namespace Servicios.Tests
         [TestMethod()]
         public void AgregarTipoEventoSinExitoVacio()
         {
-            try
-            {
+          
                 //PRUEBA no EXITOSA-  registrar un tipo evento que le falta un dato
                 TipoEvento tipoEventotest = new TipoEvento();
 
                 tipoEventotest.IdTipoEvento = -1;
                 tipoEventotest.Descripcion = "Matrimonio";
 
-                if (tipoEventotest.IdTipoEvento <= -1)
-                {
-                    throw new Exception("Valor del tipo de Evento no puede ser vacio debe  ser un numero entero mayor");
-                }
+          
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.AddEntity(tipoEventotest);
+                Assert.ThrowsException<ArgumentException>(() => stev.AddEntity(tipoEventotest));
+
+
 
             }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
-
-        }
         /// <summary>
         /// Crear pruebas unitarias a actualizar tipo de evento
         /// </summary>
         [TestMethod()]
-        public void ActualizarTipoEventoExito()
+        public void CambiarTipoEventoExito()
         {
-            try
-            {
+          
                 //PRUEBA EXITOSA- Actualizar tipo evento
                 TipoEvento tipoEventotest = new TipoEvento();
 
@@ -113,48 +85,32 @@ namespace Servicios.Tests
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.UpdateEntity(tipoEventotest);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
-
+               //Assert.ThrowsException<ArgumentException>(() => stev.UpdateEntity(tipoEventotest));
+         
         }
+
         [TestMethod()]
-        public void ActualizarTipoEventoSinExitoVacio()
+        public void CambiarTipoEventoSinExitoVacio()
         {
-            try
-            {
+          
                 //PRUEBA  no EXITOSA- Actualizar tipo evento con campo vacio 
                 TipoEvento tipoEventotest = new TipoEvento();
 
                 tipoEventotest.IdTipoEvento = -1;
                 tipoEventotest.Descripcion = "Matrimonio Civil ";
 
-                if (tipoEventotest.IdTipoEvento <= -1)
-                {
-                    throw new Exception("Valor del tipo de Evento no puede ser vacio debe  ser un numero entero mayor");
-                }
+             
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.UpdateEntity(tipoEventotest);
+                Assert.ThrowsException<ArgumentException>(() => stev.UpdateEntity(tipoEventotest));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
 
         }
+
         [TestMethod()]
-        public void ActualizarTipoEventoSinExitoNoExiste()
+        public void CambiarTipoEventoSinExitoNoExiste()
         {
-            try
-            {
+           
                 //PRUEBA NO  EXITOSA- Actualizar tipo eventoQUE NO EXISTE 
                 TipoEvento tipoEventotest = new TipoEvento();
 
@@ -164,14 +120,10 @@ namespace Servicios.Tests
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.UpdateEntity(tipoEventotest);
+                Assert.ThrowsException<ArgumentException>(() => stev.UpdateEntity(tipoEventotest));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
 
-            }
+            
 
         }
         /// <summary>
@@ -180,9 +132,7 @@ namespace Servicios.Tests
         [TestMethod()]
         public void EliminarConExitoTipoEvento()
         {
-            try
-            {
-                //PRUEBA EXITOSA- Eliminar tipo evento
+               //PRUEBA EXITOSA- Eliminar tipo evento
                 TipoEvento tipoEventotest = new TipoEvento();
 
                 tipoEventotest.IdTipoEvento = 40;
@@ -191,14 +141,9 @@ namespace Servicios.Tests
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.DeleteEntity(tipoEventotest.IdTipoEvento);
+               //Assert.ThrowsException<ArgumentException>(() => stev.DeleteEntity(tipoEventotest));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
 
-            }
 
         }
 
@@ -206,56 +151,39 @@ namespace Servicios.Tests
         [TestMethod()]
         public void EliminarSinExitoTipoEventoVacio()
         {
-            try
-            {
+           
                 //PRUEBA no  EXITOSA- Eliminar tipo evento que no existe  
-                TipoEvento tipoEventotest = new TipoEvento();
-
-                tipoEventotest.IdTipoEvento = 40;
-                tipoEventotest.Descripcion = "MATRIMONIO";
-
-
-
-                ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.DeleteEntity(tipoEventotest.IdTipoEvento);
-
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-
-            }
-
-        }
-
-
-        [TestMethod()]
-        public void EliminarSinExitoTipoEventoSinDato()
-        {
-            try
-            {
-                //PRUEBA no EXITOSA- Eliminar tipo evento que tiene campo vacio 
                 TipoEvento tipoEventotest = new TipoEvento();
 
                 tipoEventotest.IdTipoEvento = -1;
                 tipoEventotest.Descripcion = "MATRIMONIO";
 
-                if (tipoEventotest.IdTipoEvento <= -1)
-                {
-                    throw new Exception("Valor del tipo de Evento no puede ser vacio debe  ser un numero entero mayor");
-                }
-
 
 
                 ServicioTipoEvento stev = new ServicioTipoEvento();
-                int res = stev.DeleteEntity(tipoEventotest.IdTipoEvento);
+                Assert.ThrowsException<ArgumentException>(() => stev.DeleteEntity(tipoEventotest.IdTipoEvento));
 
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
 
-            }
+
+         }
+
+
+        [TestMethod()]
+        public void EliminarSinExitoTipoEventoNoExixte()
+        {
+              //PRUEBA no EXITOSA- Eliminar tipo evento que tiene campo vacio 
+                TipoEvento tipoEventotest = new TipoEvento();
+
+                tipoEventotest.IdTipoEvento = 80;
+                tipoEventotest.Descripcion = "Baby Shower";
+
+              
+
+
+                ServicioTipoEvento stev = new ServicioTipoEvento();
+              Assert.ThrowsException<ArgumentException>(() => stev.DeleteEntity(tipoEventotest.IdTipoEvento));
+
+
 
         }
     }

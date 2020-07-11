@@ -12,150 +12,115 @@ namespace Servicios.Tests
     [TestClass()]
     public class ServicioTipoEmpresaTests
     {
-        //[TestMethod()]
-        //public void AgregarTipoEmpresaConExito()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA EXITOSA- registar una nuevo tipo empresa
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+        [TestMethod()]
+        public void AgregarTipoEmpresaConExito()
+        {
+         
+                //PRUEBA EXITOSA- registar una nuevo tipo empresa
 
-        //        tipoEmpresatest.IdTipoEmpresa = 50;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
 
-
-
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.AddEntity(tipoEmpresatest);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-
-        //    }
-
-        //}
-
-        //[TestMethod()]
-        //public void AgregarTipoEmpresasinExito()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA sin exito - ya se encuentra registrada en la base de datos
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = 50;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+                tipoEmpresatest.IdTipoEmpresa = 50;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
 
 
 
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.AddEntity(tipoEmpresatest);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-
-        //    }
-
-        //}
-
-
-        //[TestMethod()]
-        //public void AgregarTipoEmpresasinExitovacio()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA sin exito - ya se encuentra un dato vacio
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = -1;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
-
-
-        //        if (tipoEmpresatest.IdTipoEmpresa <= -1)
-        //        {
-        //            throw new Exception("Valor del tipo de empresa no puede ser vacio debe ser un numero mayor");
-        //        }
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+               // Assert.ThrowsException<ArgumentException>(() => ste.AddEntity(tipoEmpresatest));
 
 
 
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.AddEntity(tipoEmpresatest);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-
-        //    }
-
-        //}
-
-
-        ///// <summary>
-        ///// Creacion de pruebas unitarias a metodo actualizar tipo empresa 
-        ///// </summary>
-        //[TestMethod()]
-        //public void ActualizarConExitoTipoEmpresa()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA EXITOSA- Actualizar tipo empresa
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = 50;
-        //        tipoEmpresatest.Descripcion = "SOC. CIVIL";
-
-
-
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.UpdateEntity(tipoEmpresatest);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-
-        //    }
-
-
-        //}
-
-
-        //[TestMethod()]
-        //public void ActualizarSinExitoTipoEmpresaNoExiste()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA sin exito  Actualizar tipo empresa que no existe 
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = 70;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
-
-
-
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.UpdateEntity(tipoEmpresatest);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-
-        //    }
-
-
-        //}
+        }
 
         [TestMethod()]
-        public void ActualizarSinExitoTipoEmpresaVacio()
+        public void AgregarTipoEmpresasinExito()
         {
             
-                //PRUEBA sin exito  Actualizar tipo empresa con campo vacio  
+                //PRUEBA sin exito - ya se encuentra registrada en la base de datos
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+
+                tipoEmpresatest.IdTipoEmpresa = 10;
+                tipoEmpresatest.Descripcion = "SPA";
+
+
+
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+               Assert.ThrowsException<ArgumentException>(() => ste.AddEntity(tipoEmpresatest));
+
+
+
+        }
+
+
+        [TestMethod()]
+        public void AgregarTipoEmpresasinExitovacio()
+        {
+           
+                //PRUEBA sin exito - ya se encuentra un dato vacio
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+
+                tipoEmpresatest.IdTipoEmpresa = -1;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+
+
+              
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+               
+               Assert.ThrowsException<ArgumentException>(() => ste.AddEntity(tipoEmpresatest));
+
+
+        }
+
+
+        /// <summary>
+        /// Creacion de pruebas unitarias a metodo actualizar tipo empresa 
+        /// </summary>
+      
+        [TestMethod()]
+        public void CambiarConExitoTipoEmpresa()
+        {
+          
+                //PRUEBA EXITOSA- Actualizar tipo empresa
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+
+                tipoEmpresatest.IdTipoEmpresa = 50;
+                tipoEmpresatest.Descripcion = "SOC. CIVIL";
+
+
+
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                //Assert.ThrowsException<ArgumentException>(() => ste.UpdateEntity(tipoEmpresatest));
+
+
+
+
+
+        }
+
+
+        [TestMethod()]
+        public void CambiarSinExitoTipoEmpresaNoExiste()
+        {
+              //PRUEBA sin exito  Actualizar tipo empresa que no existe 
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+
+                tipoEmpresatest.IdTipoEmpresa = 70;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+
+
+
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                Assert.ThrowsException<ArgumentException>(() => ste.UpdateEntity(tipoEmpresatest));
+
+
+
+        }
+
+        [TestMethod()]
+        public void CambiarSinExitoTipoEmpresaVacio()
+        {
+            
+               // PRUEBA sin exito  Actualizar tipo empresa con campo vacio  
                 TipoEmpresa tipoEmpresatest = new TipoEmpresa();
 
                 tipoEmpresatest.IdTipoEmpresa = -1;
@@ -171,87 +136,64 @@ namespace Servicios.Tests
 
 
         }
-        ///// <summary>
-        ///// Pruebas Unitarias a metodo Eliminar Tipo de empresa 
-        ///// </summary>
-        //[TestMethod()]
-        //public void EliminarTipoEmpresaConExito()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA EXITOSA- Eliminar tipo empresa
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
+        /// <summary>
+        /// Pruebas Unitarias a metodo Eliminar Tipo de empresa 
+        /// </summary>
+        [TestMethod()]
+        public void EliminarTipoEmpresaConExito()
+        {
+              //PRUEBA EXITOSA- Eliminar tipo empresa
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
 
-        //        tipoEmpresatest.IdTipoEmpresa = 50;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+                tipoEmpresatest.IdTipoEmpresa = 50;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
 
 
 
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa);
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                
+             // Assert.ThrowsException<ArgumentException>(() => ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa));
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
+         
+        }
 
-        //    }
+        [TestMethod()]
+        public void EliminarTipoEmpresaSinExitoNoexiste()
+        {
+          
+                //PRUEBA no exitosa - al eliminar una tipo de empresa no existente
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
 
-        //}
-
-        //[TestMethod()]
-        //public void EliminarTipoEmpresaSinExitoNoexiste()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA no exitosa - al eliminar una tipo de empresa no existente
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = 50;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+                tipoEmpresatest.IdTipoEmpresa = 50;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
 
 
 
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa);
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                Assert.ThrowsException<ArgumentException>(() => ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa));
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
+        
 
-        //    }
+        }
 
-        //}
+        [TestMethod()]
+        public void EliminarTipoEmpresaSinExitovacio()
+        {
+           
+                //PRUEBA no exitosa - al eliminar una tipo de empresa con dato vacio 
+                TipoEmpresa tipoEmpresatest = new TipoEmpresa();
 
-        //[TestMethod()]
-        //public void EliminarTipoEmpresaSinExitovacio()
-        //{
-        //    try
-        //    {
-        //        //PRUEBA no exitosa - al eliminar una tipo de empresa con dato vacio 
-        //        TipoEmpresa tipoEmpresatest = new TipoEmpresa();
-
-        //        tipoEmpresatest.IdTipoEmpresa = -1;
-        //        tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
+                tipoEmpresatest.IdTipoEmpresa = -1;
+                tipoEmpresatest.Descripcion = "SOCIEDAD CIVIL";
 
 
-        //        if (tipoEmpresatest.IdTipoEmpresa <= -1)
-        //        {
-        //            throw new Exception("Valor del tipo Empresa  no puede ser vacio debe ser  un numero mayor");
-        //        }
 
-        //        ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
-        //        int res = ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa);
+                ServicioTipoEmpresa ste = new ServicioTipoEmpresa();
+                Assert.ThrowsException<ArgumentException>(() => ste.DeleteEntity(tipoEmpresatest.IdTipoEmpresa));
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
+          
 
-        //    }
-
-        //}
+        }
     }
 
 

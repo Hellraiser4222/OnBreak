@@ -47,6 +47,13 @@ namespace Servicios
 
         public override int DeleteEntity(object key)
         {
+
+
+            if (string.IsNullOrEmpty((String)key))
+            {
+                throw new ArgumentException("Valor numero contrato  no puede ser vacio");
+            }
+
             int res = 0;
             Contrato contrato = GetEntity(key);
             if (contrato != null)
@@ -82,7 +89,14 @@ namespace Servicios
         }
 
         public override int UpdateEntity(Contrato entity)
-        {
+       {
+            if (string.IsNullOrEmpty(entity.Numero))
+            {
+                throw new ArgumentException("Valor numero contrato  no puede ser vacio");
+            }
+
+
+
             int res = 0;
             Contrato contrato = GetEntity(entity.Numero);
             if (contrato != null)

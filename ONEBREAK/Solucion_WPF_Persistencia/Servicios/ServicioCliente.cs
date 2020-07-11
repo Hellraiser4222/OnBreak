@@ -68,8 +68,7 @@ namespace Servicios
         public override Cliente GetEntity(object key)
         {
            
-            //Cliente cliente = (Cliente)key;
-            //String rutCliente = cliente.RutCliente;
+           
 
             return em.Cliente.Where(a => a.RutCliente == (string)key).FirstOrDefault<Cliente>();
             //return em.Cliente.Where(a => a.RutCliente == rutCliente).FirstOrDefault<Cliente>();

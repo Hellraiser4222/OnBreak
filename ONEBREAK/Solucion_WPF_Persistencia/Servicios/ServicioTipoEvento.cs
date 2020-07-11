@@ -48,6 +48,11 @@ namespace Servicios
             TipoEvento Tipo_Evento = GetEntity(key);
             if (Tipo_Evento != null)
             {
+
+                if (Tipo_Evento.IdTipoEvento <= -1)
+                {
+                    throw new ArgumentException("Valor del tipo de evento no puede ser vacio debe  ser un numero entero mayor");
+                }
                 em.TipoEvento.Remove(Tipo_Evento);
                 res=em.SaveChanges();
             }
@@ -73,6 +78,12 @@ namespace Servicios
 
         public override int UpdateEntity(TipoEvento entity)
         {
+
+
+            if (entity.IdTipoEvento <= -1)
+            {
+                throw new ArgumentException("Valor del tipo de evento no puede ser vacio debe  ser un numero entero mayor");
+            }
             int res = 0;
             TipoEvento Tipo_Evento = GetEntity(entity.IdTipoEvento);
             if (Tipo_Evento != null)

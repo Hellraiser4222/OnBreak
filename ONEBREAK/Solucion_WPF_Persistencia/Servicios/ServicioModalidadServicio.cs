@@ -43,7 +43,12 @@ namespace Servicios
         public override int  DeleteEntity(object key)
         {
             int res = 0;
-           
+
+            if (string.IsNullOrEmpty((string)key))
+            {
+                throw new ArgumentException("Valor del Modalidad no puede ser vacio");
+            }
+
             ModalidadServicio Modalidad_Servicio = GetEntity(key);
             if (Modalidad_Servicio != null)
             {
@@ -74,7 +79,14 @@ namespace Servicios
         public override int UpdateEntity(ModalidadServicio entity)
         {
 
+            if (string.IsNullOrEmpty(entity.IdModalidad))
+            {
+                throw new ArgumentException("Valor del modalidad no puede ser vacio");
+            }
+
             int res = 0;
+
+
 
             ModalidadServicio Modalidad_Servicio = GetEntity(entity.IdModalidad);
             if (Modalidad_Servicio != null)

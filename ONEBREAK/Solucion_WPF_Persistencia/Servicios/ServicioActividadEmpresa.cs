@@ -49,10 +49,19 @@ namespace Servicios
 
         public override int DeleteEntity(object key)
         {
+
+
             int res = 0;
             ActividadEmpresa actividad_Empresa = GetEntity(key);
-            if(actividad_Empresa!= null)
+
+            if (actividad_Empresa!= null)
             {
+                if (actividad_Empresa.IdActividadEmpresa<= -1)
+                {
+                    throw new ArgumentException("Valor de actividad empresa  no puede ser vacio debe  ser un numero entero mayor");
+                }
+
+
                 em.ActividadEmpresa.Remove(actividad_Empresa);
                 res=em.SaveChanges();
             }
@@ -74,7 +83,15 @@ namespace Servicios
 
         public override int UpdateEntity(ActividadEmpresa entity)
         {
-           int res = 0;
+            if (entity.IdActividadEmpresa<= -1)
+            {
+                throw new ArgumentException("Valor del Actividad empresa no puede ser vacio debe  ser un numero entero mayor");
+            }
+
+
+
+
+            int res = 0;
             ActividadEmpresa actividad_Empresa = GetEntity(entity.IdActividadEmpresa);
             if(actividad_Empresa != null)
             {

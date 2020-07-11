@@ -43,12 +43,22 @@ namespace Servicios
 
         public override int  DeleteEntity(object key)
         {
+            
+
             int res = 1;
 
-            TipoEmpresa TipoEmpresa = GetEntity(key);
-            if (TipoEmpresa != null)
+
+            TipoEmpresa Tipo_Empresa = GetEntity(key);
+            if (Tipo_Empresa != null)
             {
-                em.TipoEmpresa.Remove(TipoEmpresa);
+
+
+
+                if ( Tipo_Empresa.IdTipoEmpresa<= -1)
+                {
+                    throw new ArgumentException("Valor del tipo de empresa no puede ser vacio debe  ser un numero entero mayor");
+                }
+                em.TipoEmpresa.Remove(Tipo_Empresa);
                 res=em.SaveChanges();
             }
             else
