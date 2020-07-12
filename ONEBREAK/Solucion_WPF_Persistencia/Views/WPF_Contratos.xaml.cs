@@ -283,6 +283,15 @@ namespace Views
                     var totalAsistentes = Convert.ToString(PrecioAsistentes);
                     txtValorAsis.Text = totalAsistentes;
                 }
+                else if (asistentes >= 51)
+                {
+                    double nAsis = ((asistentes - 50) / 20);
+                    Math.Truncate(nAsis);
+                    recargo = (2 * 27000);
+                    var precioAsistentes = (int)(nAsis) * recargo;
+                    txtValorAsis.Text = Convert.ToString(precioAsistentes);
+                }
+                int valorAsistentes = Convert.ToInt32(txtValorAsis.Text);
 
 
             }
