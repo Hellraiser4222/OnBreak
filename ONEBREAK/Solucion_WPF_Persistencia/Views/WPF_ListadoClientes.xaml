@@ -58,8 +58,8 @@
                 <DataGridTextColumn Header="Mail" Binding="{Binding Path=MailContacto}" Width="105" Foreground="#FF252526"/>
                 <DataGridTextColumn Header="Razon" Binding="{Binding Path=Direccion}" Width="105" Foreground="#FF252526"/>
                 <DataGridTextColumn Header="Telefono" Binding="{Binding Path=Telefono}" Width="110" Foreground="#FF252526"/>
-                <DataGridTextColumn Header="Act.Empresa" Binding="{Binding Path=IdActividadEmpresa}" Width="100" Foreground="#FF252526"/>
-                <DataGridTextColumn Header="Tipo Empresa" Binding="{Binding Path=IdTipoEmpresa}" Width="104" Foreground="#FF252526" />
+                <DataGridTextColumn Header="Act.Empresa" Binding="{Binding Path=ActividadEmpresa.Descripcion}" Width="100" Foreground="#FF252526"/>
+                <DataGridTextColumn Header="Tipo Empresa" Binding="{Binding Path=TipoEmpresa.Descripcion}" Width="104" Foreground="#FF252526" />
             </DataGrid.Columns>
         </DataGrid>
         <Label x:Name="lblLista" Content="Listado de Clientes" HorizontalAlignment="Left" Margin="142,23,0,0" VerticalAlignment="Top" Width="413" Foreground="Gray" FontSize="36"/>
